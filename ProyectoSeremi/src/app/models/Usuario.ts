@@ -1,7 +1,7 @@
 export interface Usuario {
     rut: string,
     correo: string,
-    contraseña: boolean, 
+    contraseña: string, 
     rol: string,
     region: string,
     comuna: string,
