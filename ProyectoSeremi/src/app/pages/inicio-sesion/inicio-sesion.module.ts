@@ -8,12 +8,16 @@ import { InicioSesionPageRoutingModule } from './inicio-sesion-routing.module';
 
 import { InicioSesionPage } from './inicio-sesion.page';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InicioSesionPageRoutingModule
+    ReactiveFormsModule,
+    InicioSesionPageRoutingModule,
   ],
   declarations: [InicioSesionPage]
 })
