@@ -43,6 +43,11 @@ const routes: Routes = [
     path: 'crear-charla',
     loadChildren: () => import('./pages/crear-charla/crear-charla.module').then( m => m.CrearCharlaPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+
 
 
 

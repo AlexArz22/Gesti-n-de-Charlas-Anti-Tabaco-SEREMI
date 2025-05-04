@@ -1,19 +1,40 @@
 .custom-header {
-    --background: #ccc; /* Gris claro */
+    --background: #ccc;
     padding: 0 10px;
   }
   
   .header-content {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end; /* Alinea el user-info a la derecha */
+    width: 100%;
+    height: 56px;
+  }
+  
+  .left-image {
+    position: absolute;
+    left: 17px;
+    height: 54px;
+    width: auto;
+  }
+  
+  /* Botón Home centrado */
+  .home-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centra el icono horizontalmente */
+    padding: 0;
+    background: transparent; /* Fondo transparente */
+    border: none;
   }
   
   .home-icon {
-    font-size: 24px;
+    font-size: 24px; /* Tamaño del icono de Home */
     color: black;
   }
   
+  /* Estilos para la sección de usuario */
   .user-info {
     display: flex;
     align-items: center;
@@ -22,9 +43,21 @@
     border-radius: 20px;
   }
   
+  .user-button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+  
   .user-icon {
-    font-size: 24px;
+    font-size: 24px; /* Tamaño del icono de Usuario */
     color: black;
     margin-right: 8px;
+  }
+  
+  .user-info span {
+    font-size: 14px; /* Ajusta el tamaño del texto */
   }
   

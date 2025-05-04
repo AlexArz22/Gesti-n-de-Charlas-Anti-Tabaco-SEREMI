@@ -1,10 +1,21 @@
 <ion-header>
     <ion-toolbar class="custom-header">
       <div class="header-content">
-        <ion-icon name="home" class="home-icon"></ion-icon>
+        <img src="assets/LOGO_SEREMI.png" alt="Logo" class="left-image" />
+        
+        <!-- Botón Home centrado -->
+        <ion-button fill="clear" color="primary" class="home-button" (click)="goToPrincipal()">
+            <ion-icon name="home" class="home-icon"></ion-icon>
+        </ion-button>
+          
+        
+        <!-- Información de usuario con redirección a perfil -->
         <div class="user-info">
-          <ion-icon name="person-circle" class="user-icon"></ion-icon>
-          <span>Hola, Nombre Apellido</span>
+            <ion-button fill="clear" color="secondary" class="user-button" (click)="goToPerfil()">
+                <ion-icon name="person-circle" class="user-icon"></ion-icon>
+                <span>Hola, Nombre Apellido</span>
+              </ion-button>
+              
         </div>
       </div>
     </ion-toolbar>
