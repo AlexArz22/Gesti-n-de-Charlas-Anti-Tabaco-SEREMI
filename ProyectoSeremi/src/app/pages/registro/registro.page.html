@@ -5,45 +5,42 @@
         </ion-toolbar>
     </ion-header>
 
-    <form [formGroup]="formularioRegistro" (ngSubmit)="registrarse()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">RUT</ion-label>
+        <ion-input formControlName="rut" type="text"></ion-input>
+      </ion-item>
 
-        <ion-list>
-            <ion-item>
-              <ion-label position="floating">RUT</ion-label>
-              <ion-input formControlName="rut" type="text"></ion-input>
-            </ion-item>
-      
-            <ion-item>
-              <ion-label position="floating">Correo electrónico</ion-label>
-              <ion-input formControlName="correo" type="email"></ion-input>
-            </ion-item>
-      
-            <ion-item>
-              <ion-label position="floating">Contraseña</ion-label>
-              <ion-input formControlName="contraseña" type="password"></ion-input>
-            </ion-item>
-      
-            <ion-item>
-              <ion-label position="floating">Región</ion-label>
-              <ion-input formControlName="region" type="text"></ion-input>
-            </ion-item>
-      
-            <ion-item>
-              <ion-label position="floating">Comuna</ion-label>
-              <ion-input formControlName="comuna" type="text"></ion-input>
-            </ion-item>
-      
-            <ion-item>
-              <ion-label position="floating">Dirección</ion-label>
-              <ion-input formControlName="direccion" type="text"></ion-input>
-            </ion-item>
-        </ion-list>
-      
-        <div class="ion-padding">
-        <ion-button expand="block" type="submit" [disabled]="formularioRegistro.invalid">
-            Registrarse
-        </ion-button>
-        </div>
-      
-    </form>
+      <ion-item>
+        <ion-label position="floating">Correo electrónico</ion-label>
+        <ion-input formControlName="correo" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="contraseña" type="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Región</ion-label>
+        <ion-input formControlName="region" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Comuna</ion-label>
+        <ion-input formControlName="comuna" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Dirección</ion-label>
+        <ion-input formControlName="direccion" type="text"></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+  <ion-button expand="block" type="submit" [disabled]="formularioRegistro.invalid">
+      Registrarse
+  </ion-button>
+  </div>
+
 </ion-content>

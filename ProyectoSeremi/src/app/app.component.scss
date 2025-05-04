@@ -1,0 +1,21 @@
+.app-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .content-layout {
+    display: flex;
+    flex: 1;
+  }
+  
+  .left-sidebar,
+  .right-sidebar {
+    width: 100px; // o el ancho que necesites
+    background-color: #f0f0f0;
+  }
+  
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+  }
