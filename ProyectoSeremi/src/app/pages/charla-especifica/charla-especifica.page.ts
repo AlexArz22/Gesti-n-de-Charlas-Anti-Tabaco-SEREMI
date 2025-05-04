@@ -16,10 +16,10 @@ export class CharlaEspecificaPage implements OnInit {
   constructor(private route: ActivatedRoute, private charlasService: CharlasService) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.paramMap.get('id');
+    /*const id = this.route.snapshot.paramMap.get('id');
     if(id) {
       this.charla = this.charlasService.obtenerCharlaPorId(id);
-    }
+    }*/
   }
 
 }

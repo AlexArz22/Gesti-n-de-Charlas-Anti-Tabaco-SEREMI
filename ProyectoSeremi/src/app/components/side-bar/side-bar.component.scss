@@ -1,0 +1,13 @@
+.sidebar {
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  }

@@ -15,7 +15,7 @@ export class CrearCharlaPage implements OnInit {
 
 
   guardarCharla(charla: Charla) {
-    this.charlasService.agregarCharla(charla);
+    //this.charlasService.agregarCharla(charla);
     this.router.navigate(['/charlas']);
   }
 

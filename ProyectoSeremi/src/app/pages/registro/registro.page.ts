@@ -20,7 +20,7 @@ export class RegistroPage implements OnInit {
      
 
   ngOnInit() {
-    this.formularioRegistro = this.fb.group({ //se usa FormBuilder para crear un formulario.
+    /*this.formularioRegistro = this.fb.group({ //se usa FormBuilder para crear un formulario.
     rut: ['', Validators.required], // Se inicializa vacío y se aplica validación para que exiga que no esté vacío.
     correo: ['', [Validators.required, Validators.email]], // Debe tener un campo de correo valido.
     contraseña: ['', [Validators.required, Validators.minLength(8)]], //Mínimo de 8 caracteres.
@@ -28,11 +28,11 @@ export class RegistroPage implements OnInit {
     region: ['', Validators.required],
     comuna: ['', Validators.required],
     direccion: ['', Validators.required],
-    });
+    });*/
   }
 
   registrarse() {
-
+    /*
     if (this.formularioRegistro.invalid) {
       return; // Si es inválido, retorna para que no se ejecute el registro.
     }
@@ -45,7 +45,7 @@ export class RegistroPage implements OnInit {
       this.router.navigate(['/inicio-sesion']);
     } else{
       console.log('Error: El usuario no pudo ser registrado')
-    }
+    }*/
   }
 
 

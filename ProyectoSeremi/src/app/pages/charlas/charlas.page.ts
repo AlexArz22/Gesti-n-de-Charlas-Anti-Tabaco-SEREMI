@@ -14,7 +14,7 @@ export class CharlasPage implements OnInit {
   constructor(private charlasService:CharlasService , private router:Router) {}
 
   ngOnInit() {
-    this.charlas = this.charlasService.obtenerCharlas();
+    //this.charlas = this.charlasService.obtenerCharlas();
   }
 
   verCharla(charlaId: string) {

@@ -29,7 +29,7 @@ export class InicioSesionPage implements OnInit {
   }
 
   iniciarSesion() {
-    if (this.formularioInicio.invalid) { //Si el formulario no es valido desde HTML, no se procede con el inicio.
+    /*if (this.formularioInicio.invalid) { //Si el formulario no es valido desde HTML, no se procede con el inicio.
       return;
     }
 
@@ -43,7 +43,7 @@ export class InicioSesionPage implements OnInit {
       console.log('Correo o contraseña incorrectos');
     }
 
-    
+    */
   }
 
   irARegistro() {
