@@ -1,0 +1,23 @@
+ion-item {
+    --background: #ffffff; /* Fondo blanco para el item */
+    --border-color: #080808; /* Color de borde si lo necesitas */
+    --color: #020202;
+}
+
+ion-input {
+    //--background: #ffffff; /* Fondo blanco para los inputs */
+    --color: #000000; /* Color del texto del input */
+}
+
+ion-label {
+    --color: #000000; 
+}
+
+.login-wrapper {
+    max-width: 400px;
+    margin: auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
