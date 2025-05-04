@@ -1,0 +1,30 @@
+.custom-header {
+    --background: #ccc; /* Gris claro */
+    padding: 0 10px;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .home-icon {
+    font-size: 24px;
+    color: black;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .user-icon {
+    font-size: 24px;
+    color: black;
+    margin-right: 8px;
+  }
+  
