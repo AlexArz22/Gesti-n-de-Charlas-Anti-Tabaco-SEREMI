@@ -22,10 +22,10 @@ export class InicioSesionPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.formularioInicio = this.fb.group({
+    /*this.formularioInicio = this.fb.group({
       correo: ['', [Validators.required, Validators.email]],
       contraseña: ['', [Validators.required, Validators.minLength(8)]],
-    });
+    });*/
   }
 
   iniciarSesion() {
@@ -45,6 +45,10 @@ export class InicioSesionPage implements OnInit {
 
     */
   }
+
+  irAPrincipal() {
+    this.router.navigate(['/principal']);
+    }
 
   irARegistro() {
     this.router.navigate(['/registro']);
