@@ -35,6 +35,16 @@ const routes: Routes = [
     path: 'restablecer-contra',
     loadChildren: () => import('./pages/restablecer-contra/restablecer-contra.module').then( m => m.RestablecerContraPageModule)
   },
+  {
+    path: 'charla-especifica/:id',
+    loadChildren: () => import('./pages/charla-especifica/charla-especifica.module').then( m => m.CharlaEspecificaPageModule)
+  },
+  {
+    path: 'crear-charla',
+    loadChildren: () => import('./pages/crear-charla/crear-charla.module').then( m => m.CrearCharlaPageModule)
+  },
+
+
 
 ];
 

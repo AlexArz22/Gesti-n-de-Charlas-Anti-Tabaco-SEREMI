@@ -1,0 +1,9 @@
+<app-formulario-charla
+  *ngIf="charla"
+  [charla]="charla"
+  [modo]="'ver'">
+</app-formulario-charla>
+
+<ion-button expand="block" routerLink="/editar-charla/{{ charla?.id }}">
+  Editar charla
+</ion-button>
