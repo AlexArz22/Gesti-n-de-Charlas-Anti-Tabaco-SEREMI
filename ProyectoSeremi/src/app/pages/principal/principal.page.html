@@ -1,3 +1,31 @@
-<ion-content [fullscreen]="true">
+<ion-content>
+    <div class="contenedor-botones">
+      <!-- Botón 1: Parte superior izquierda -->
+      <ion-button color="primary" class="boton-izquierda">
+        <ion-icon slot="start" name="calendar-outline"></ion-icon>
+        Calendario
+      </ion-button>
+  
+      <!-- Botón 2: A la derecha del Botón 1 -->
+      <ion-button color="primary" class="boton-derecha">
+        <ion-icon slot="start" name="game-controller-outline"></ion-icon>
+        Actividades
+      </ion-button>
+  
+      <!-- Botón 3: Debajo del Botón 2 -->
+      <ion-button color="primary" class="boton-abajo">
+        <ion-icon slot="start" name="chatbubbles-outline"></ion-icon>
+        Charlas
+      </ion-button>
+    </div>
 
+    <div class="lista-izquierda">
+        <ion-list>
+          <ion-item>Charla 1</ion-item>
+          <ion-item>Charla 2</ion-item>
+          <ion-item>Charla 3</ion-item>
+        </ion-list>
+    </div>
 </ion-content>
+
+  

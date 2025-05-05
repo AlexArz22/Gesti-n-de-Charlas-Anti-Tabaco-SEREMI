@@ -35,29 +35,32 @@
   }
   
   /* Estilos para la sección de usuario */
-  .user-info {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    padding: 5px 10px;
-    border-radius: 20px;
-  }
-  
-  .user-button {
-    display: flex;
-    align-items: center;
-    background: transparent;
-    border: none;
-    padding: 0;
-  }
-  
-  .user-icon {
-    font-size: 24px; /* Tamaño del icono de Usuario */
-    color: black;
-    margin-right: 8px;
-  }
-  
-  .user-info span {
-    font-size: 14px; /* Ajusta el tamaño del texto */
-  }
-  
+/* Estilos para la sección de usuario */
+.user-info {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1vh 2vw; /* El padding se ajusta en función del tamaño de la pantalla */
+  border-radius: 20px;
+  font-size: 3vw; /* El tamaño de la fuente se adapta al 3% del ancho de la pantalla */
+  width: 30vw; /* Ajusta el fondo al 30% del ancho de la pantalla */
+  max-width: 400px; /* Limita el fondo a un tamaño máximo */
+}
+
+.user-button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.user-icon {
+  font-size: 4.5vw; /* El tamaño del icono se adapta al ancho de la pantalla */
+  color: black;
+  margin-right: 1vw; /* Espaciado entre el icono y el texto */
+}
+
+.user-info span {
+  font-size: 1.2vw; /* Ajusta el tamaño del texto */
+}
