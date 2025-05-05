@@ -1,8 +1,8 @@
 ion-content {
     display: flex;
-    justify-content: center;  /* Centra horizontalmente el contenido */
-    align-items: center;      /* Centra verticalmente el contenido */
-    height: 100%;             /* Ocupa toda la altura de la pantalla */
+    justify-content: center;  
+    align-items: center;    
+    height: 100%;            
   }
   
   .contenedor-botones {
@@ -16,32 +16,32 @@ ion-content {
   
   .boton-izquierda {
     position: absolute;
-    top: 30%;    /* Coloca el botón en la parte superior */
-    left: 25%;    /* Lo coloca a la izquierda del contenedor */
-    height: 20vh; /* 10% de la altura de la pantalla */
-    width: 27vw;  /* 30% del ancho de la pantalla */
-    font-size: 2vw; /* El tamaño de la fuente es un porcentaje del ancho de la pantalla */
-    padding: 2vh 3vw; /* Padding relativo al alto y ancho de la pantalla */ 
+    top: 30%;  
+    left: 25%;   
+    height: 20vh; 
+    width: 27vw;  
+    font-size: 2vw; 
+    padding: 2vh 3vw; 
   }
   
   .boton-derecha {
     position: absolute;
-    top: 30%;   /* Lo coloca a la misma altura que el Botón 1 */
-    left: 49%;  /* Lo coloca a la derecha de Botón 1 (más cerca) */
-    height: 20vh; /* 10% de la altura de la pantalla */
-    width: 27vw;  /* 30% del ancho de la pantalla */
-    font-size: 2vw; /* El tamaño de la fuente es un porcentaje del ancho de la pantalla */
-    padding: 2vh 3vw; /* Padding relativo al alto y ancho de la pantalla */
+    top: 30%; 
+    left: 49%;  
+    height: 20vh; 
+    width: 27vw; 
+    font-size: 2vw; 
+    padding: 2vh 3vw; 
   }
   
   .boton-abajo {
     position: absolute;
-    top: 52%;  /* Coloca el botón directamente debajo del Botón 2 */
-    left: 49%; /* Lo coloca en la misma línea que el Botón 2 */
-    height: 20vh; /* 10% de la altura de la pantalla */
-    width: 27vw;  /* 30% del ancho de la pantalla */
-    font-size: 2vw; /* El tamaño de la fuente es un porcentaje del ancho de la pantalla */
-    padding: 2vh 3vw; /* Padding relativo al alto y ancho de la pantalla */
+    top: 52%;
+    left: 49%;
+    height: 20vh; 
+    width: 27vw;  
+    font-size: 2vw;
+    padding: 2vh 3vw; 
   }
   
   
@@ -49,11 +49,11 @@ ion-content {
 
   .lista-izquierda {
     position: absolute;
-    top: 56px; /* debajo del header */
+    top: 56px; 
     left: 0;
     width: 20vw;
     max-height: 40vh;
-    background-color: rgba(128, 128, 128, 0.4); /* gris translúcido */
+    background-color: rgba(128, 128, 128, 0.4); 
     padding: 1rem;
     box-sizing: border-box;
     z-index: 10;
@@ -62,10 +62,10 @@ ion-content {
   }
   
   .lista-izquierda ion-item {
-    --background: rgba(255, 255, 255, 0.767);        /* fondo blanco */
-    color: #000000;               /* texto negro */
-    --inner-border-width: 0px;    /* elimina bordes internos */
-    --border-color: transparent;  /* elimina divisores */
+    --background: rgba(255, 255, 255, 0.767);    
+    color: #000000;            
+    --inner-border-width: 0px;   
+    --border-color: transparent;  
   }
   
   .lista-izquierda ion-list {
