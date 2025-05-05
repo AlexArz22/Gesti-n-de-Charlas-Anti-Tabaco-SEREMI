@@ -55,6 +55,6 @@ export class InicioSesionPage implements OnInit {
     }
 
   irARecuperarContrasena() {
-    this.router.navigate(['/recuperar-contraseña']);
+    this.router.navigate(['/restablecer-contra']);
   }
 }
