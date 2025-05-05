@@ -1,0 +1,66 @@
+.custom-header {
+    --background: #ccc;
+    padding: 0 10px;
+  }
+  
+  .header-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinea el user-info a la derecha */
+    width: 100%;
+    height: 56px;
+  }
+  
+  .left-image {
+    position: absolute;
+    left: 17px;
+    height: 54px;
+    width: auto;
+  }
+  
+  /* Botón Home centrado */
+  .home-button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centra el icono horizontalmente */
+    padding: 0;
+    background: transparent; /* Fondo transparente */
+    border: none;
+  }
+  
+  .home-icon {
+    font-size: 24px; /* Tamaño del icono de Home */
+    color: black;
+  }
+  
+  /* Estilos para la sección de usuario */
+/* Estilos para la sección de usuario */
+.user-info {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 1vh 2vw; /* El padding se ajusta en función del tamaño de la pantalla */
+  border-radius: 20px;
+  font-size: 3vw; /* El tamaño de la fuente se adapta al 3% del ancho de la pantalla */
+  width: 30vw; /* Ajusta el fondo al 30% del ancho de la pantalla */
+  max-width: 400px; /* Limita el fondo a un tamaño máximo */
+}
+
+.user-button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.user-icon {
+  font-size: 4.5vw; /* El tamaño del icono se adapta al ancho de la pantalla */
+  color: black;
+  margin-right: 1vw; /* Espaciado entre el icono y el texto */
+}
+
+.user-info span {
+  font-size: 1.2vw; /* Ajusta el tamaño del texto */
+}

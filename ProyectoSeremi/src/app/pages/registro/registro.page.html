@@ -1,13 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>registro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-content [fullscreen]="false">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">registro</ion-title>
+      <ion-title>Registro</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">RUT</ion-label>
+      <ion-input placeholder="Ingrese RUT"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input placeholder="Ingrese Correo" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input placeholder="Ingrese Contraseña" type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Región</ion-label>
+      <ion-input placeholder="Ingrese Región"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Comuna</ion-label>
+      <ion-input placeholder="Ingrese Comuna"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input placeholder="Ingrese Dirección"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-button expand="block" (click)="irAInicioSesion()">
+      Registrarse
+    </ion-button>
+
+    <ion-button expand="block" fill="clear" (click)="irAInicioSesion()">
+      ¿Ya tienes cuenta? Inicia sesión
+    </ion-button>
+  </div>
 </ion-content>

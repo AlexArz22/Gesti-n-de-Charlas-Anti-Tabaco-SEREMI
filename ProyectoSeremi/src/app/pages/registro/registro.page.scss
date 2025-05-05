@@ -1,0 +1,38 @@
+ion-content {
+    --padding-top: 20px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    background: #f8f9fa;
+  }
+  
+  ion-item {
+    margin-bottom: 12px;
+    border-radius: 8px;
+    --background: #ffffff;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  ion-label {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  ion-input {
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+  
+  ion-note[color="danger"] {
+    font-size: 0.75rem;
+    margin-top: -8px;
+    margin-left: 12px;
+    color: #eb445a;
+  }
+  
+  ion-button {
+    margin: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+  }
+  

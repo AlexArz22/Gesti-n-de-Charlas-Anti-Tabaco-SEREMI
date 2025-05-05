@@ -1,0 +1,57 @@
+<form [formGroup]="formulario" (ngSubmit)="guardar()">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Fecha</ion-label>
+      <ion-datetime formControlName="fecha" presentation="date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Establecimiento</ion-label>
+      <ion-input formControlName="establecimiento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Región</ion-label>
+      <ion-input formControlName="region"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Comuna</ion-label>
+      <ion-input formControlName="comuna"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Curso</ion-label>
+      <ion-input formControlName="curso"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Asistentes Totales</ion-label>
+      <ion-input type="number" formControlName="asistenciaTotal"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Hombres Asistentes</ion-label>
+      <ion-input type="number" formControlName="asistenciaHombres"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Mujeres Asistentes</ion-label>
+      <ion-input type="number" formControlName="asistenciaMujeres"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Temario</ion-label>
+      <ion-textarea formControlName="temario"></ion-textarea>
+    </ion-item>
+
+
+  </ion-list>
+
+  <!-- Botones solo visibles si no es modo visualización -->
+  <div class="ion-padding" *ngIf="modo !== 'ver'">
+    <ion-button expand="block" type="submit">
+      {{ modo === 'crear' ? 'Crear' : 'Actualizar' }}
+    </ion-button>
+  </div>
+</form>
