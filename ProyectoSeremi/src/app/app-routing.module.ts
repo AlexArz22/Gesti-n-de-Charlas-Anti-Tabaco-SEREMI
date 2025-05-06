@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppLayoutComponent } from './components/app-layout/app-layout.component';
+import { AppComponent } from './app.component';
 
 // app-routing.module.ts
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
   // Rutas CON layout (sidebars + header condicional)
   {
     path: '',
-    component: AppLayoutComponent,
+    component: AppComponent,
     children: [
       { path: '', redirectTo: 'inicio-sesion', pathMatch: 'full' },
       { path: 'inicio-sesion', loadChildren: () => import('./pages/inicio-sesion/inicio-sesion.module').then(m => m.InicioSesionPageModule) },

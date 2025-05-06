@@ -1,1 +1,11 @@
-<app-layout></app-layout>
+<div class="app-layout">
+    <app-header *ngIf="showHeader"></app-header>
+
+    <div class="content-layout">
+        <app-side-bar></app-side-bar>
+        <div class="main-content">
+            <ion-router-outlet></ion-router-outlet>
+        </div>
+        <app-side-bar></app-side-bar>
+    </div>
+</div>
