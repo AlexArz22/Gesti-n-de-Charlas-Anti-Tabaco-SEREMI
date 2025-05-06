@@ -43,7 +43,10 @@ const routes: Routes = [
     path: 'charla-especifica',
     loadChildren: () => import('./pages/charla-especifica/charla-especifica.module').then( m => m.CharlaEspecificaPageModule)
   },
-  
+  {
+    path: 'anadir-orador',
+    loadChildren: () => import('./pages/anadir-orador/anadir-orador.module').then( m => m.AnadirOradorPageModule)
+  }
 
 
 ];
