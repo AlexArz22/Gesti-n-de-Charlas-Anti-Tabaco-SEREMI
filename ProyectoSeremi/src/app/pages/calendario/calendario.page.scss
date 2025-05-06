@@ -1,6 +1,17 @@
 .contenido-calendario {
-    text-align: center;
-    padding: 20px;
+  margin-left: 11vw;   // Compensa la sidebar izquierda
+  margin-right: 11vw;  // Compensa la sidebar derecha
+  padding: 20px;
+  text-align: left;
+  }
+
+  .titulo-calendario{
+    margin-left: 5vw; 
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 50px;
+    color: #000;
   }
   
   .volver-btn {
@@ -14,19 +25,25 @@
     justify-content: center;
     margin-top: 20px;
   }
+
+  .dias-semana{
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+  }
   
   ion-row {
     text-align: center;
   }
   
   ion-col {
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     padding: 10px 0;
   }
   
   .evento {
     background-color: #f88;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
   }
   

@@ -2,9 +2,10 @@
 
 <ion-content [fullscreen]="true">
     <div class="contenido-calendario">
-        <h1>Calendario</h1>
+        
+        <h1 class="titulo-calendario">Calendario</h1>
     
-        <ion-button expand="block" color="dark" class="volver-btn">
+        <ion-button expand="block" color="dark" class="volver-btn" (click)="BackButton()">
           Volver al menú
         </ion-button>
     
@@ -21,7 +22,7 @@
               <ion-col>Su</ion-col>
             </ion-row>
     
-            <ion-row>
+            <ion-row class="dias-semana">
               <ion-col></ion-col>
               <ion-col></ion-col>
               <ion-col>1</ion-col>
@@ -30,7 +31,7 @@
               <ion-col>4</ion-col>
               <ion-col>5</ion-col>
             </ion-row>
-            <ion-row>
+            <ion-row class="dias-semana">
               <ion-col>6</ion-col>
               <ion-col>7</ion-col>
               <ion-col>8</ion-col>
@@ -39,7 +40,7 @@
               <ion-col class="evento">11</ion-col>
               <ion-col class="evento">12</ion-col>
             </ion-row>
-            <ion-row>
+            <ion-row class="dias-semana">
               <ion-col>13</ion-col>
               <ion-col>14</ion-col>
               <ion-col>15</ion-col>
@@ -48,7 +49,7 @@
               <ion-col>18</ion-col>
               <ion-col>19</ion-col>
             </ion-row>
-            <ion-row>
+            <ion-row class="dias-semana">
               <ion-col class="evento">20</ion-col>
               <ion-col>21</ion-col>
               <ion-col>22</ion-col>
@@ -57,7 +58,7 @@
               <ion-col>25</ion-col>
               <ion-col>26</ion-col>
             </ion-row>
-            <ion-row>
+            <ion-row class="dias-semana">
               <ion-col>27</ion-col>
               <ion-col>28</ion-col>
               <ion-col>29</ion-col>
