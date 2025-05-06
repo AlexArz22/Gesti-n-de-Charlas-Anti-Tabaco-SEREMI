@@ -26,7 +26,15 @@ const routes: Routes = [
       { path: 'crear-charla', loadChildren: () => import('./pages/crear-charla/crear-charla.module').then(m => m.CrearCharlaPageModule) },
       { path: 'perfil', loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilPageModule) }
     ]
+  },  {
+    path: 'actividad-especifica',
+    loadChildren: () => import('./pages/actividad-especifica/actividad-especifica.module').then( m => m.ActividadEspecificaPageModule)
+  },
+  {
+    path: 'actividad-especifica',
+    loadChildren: () => import('./pages/actividad-especifica/actividad-especifica.module').then( m => m.ActividadEspecificaPageModule)
   }
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

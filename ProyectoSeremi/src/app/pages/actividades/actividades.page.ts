@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actividades',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   standalone: false
 })
 export class ActividadesPage implements OnInit {
+  @Input() title:string=""
+  constructor(private router: Router) {}
 
-  constructor() { }
+  goToActividad(){
+    this.router.navigate(['/actividad-especifica']);
+  }
 
   ngOnInit() {
   }

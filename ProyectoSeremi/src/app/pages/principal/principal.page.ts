@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-principal',
@@ -7,8 +8,20 @@ import { Component, OnInit } from '@angular/core';
   standalone: false
 })
 export class PrincipalPage implements OnInit {
+  @Input() title:string=""
+  constructor(private router: Router) {}
 
-  constructor() { }
+  goToCharlas() {
+    this.router.navigate(['/charlas']);
+  }
+
+  goToActividades() {
+    this.router.navigate(['/actividades']);
+  }
+
+  goToCalendario() {
+    this.router.navigate(['/calendario']);
+  }
 
   ngOnInit() {
   }

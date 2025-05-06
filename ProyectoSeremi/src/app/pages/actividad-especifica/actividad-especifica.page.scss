@@ -1,0 +1,70 @@
+.actividad-container {
+    position: relative;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .actividad-box {
+    background-color: white;
+    border: 1px solid #7879f1;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .botones-superiores {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  
+  .boton-accion {
+    background-color: #7879f1;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .boton-accion:hover {
+    background-color: #5f60d3;
+  }
+  
+  .eliminar-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7879f1;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .volver-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #2e2b3d;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  

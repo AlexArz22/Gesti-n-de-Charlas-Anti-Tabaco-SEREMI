@@ -1,19 +1,19 @@
 <ion-content>
     <div class="contenedor-botones">
       <!-- Botón 1: Parte superior izquierda -->
-      <ion-button color="primary" class="boton-izquierda">
+      <ion-button color="primary" class="boton-izquierda" (click)="goToCalendario()">
         <ion-icon slot="start" name="calendar-outline"></ion-icon>
         Calendario
       </ion-button>
   
       <!-- Botón 2: A la derecha del Botón 1 -->
-      <ion-button color="primary" class="boton-derecha">
+      <ion-button color="primary" class="boton-derecha" (click)="goToActividades()">
         <ion-icon slot="start" name="game-controller-outline"></ion-icon>
         Actividades
       </ion-button>
   
       <!-- Botón 3: Debajo del Botón 2 -->
-      <ion-button color="primary" class="boton-abajo">
+      <ion-button color="primary" class="boton-abajo" (click)="goToCharlas()">
         <ion-icon slot="start" name="chatbubbles-outline"></ion-icon>
         Charlas
       </ion-button>
@@ -27,5 +27,7 @@
         </ion-list>
     </div>
 </ion-content>
+
+
 
   
