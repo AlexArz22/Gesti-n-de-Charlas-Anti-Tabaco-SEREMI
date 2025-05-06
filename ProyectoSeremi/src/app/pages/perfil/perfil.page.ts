@@ -7,7 +7,18 @@ import { Component, OnInit } from '@angular/core';
   standalone:false
 })
 export class PerfilPage implements OnInit {
+  editando = false;
 
+  rut = '';
+  region = '';
+  comuna = '';
+  direccion = '';
+  correo = '';
+  password = '';
+
+  toggleEditar() {
+    this.editando = !this.editando;
+  }
   constructor() { }
 
   ngOnInit() {
