@@ -1,16 +1,52 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-charla-especifica',
   templateUrl: './charla-especifica.page.html',
   styleUrls: ['./charla-especifica.page.scss'],
-  standalone:false
+  standalone: false
 })
 export class CharlaEspecificaPage implements OnInit {
 
-  constructor() { }
+  tiempoTranscurrido: string = '00:00:00';
+  botonIniciado: boolean = false;
+  botonDeshabilitado: boolean = false;
 
-  ngOnInit() {
+  private intervalId: any;
+  private segundos: number = 0;
+
+  @Input() title:string=""
+  constructor(private router: Router) {}
+
+  ngOnInit() { }
+
+  goToCharlas(){
+    this.router.navigate(['/charlas']);
   }
 
+  toggleContador() {
+    if (!this.botonIniciado) {
+      this.botonIniciado = true;
+
+      this.intervalId = setInterval(() => {
+        this.segundos++;
+        this.tiempoTranscurrido = this.formatearTiempo(this.segundos);
+      }, 1000);
+    } else {
+      clearInterval(this.intervalId);
+      this.botonDeshabilitado = true;
+    }
+  }
+
+  private formatearTiempo(totalSegundos: number): string {
+    const horas = Math.floor(totalSegundos / 3600);
+    const minutos = Math.floor((totalSegundos % 3600) / 60);
+    const segundos = totalSegundos % 60;
+
+    return [
+      horas.toString().padStart(2, '0'),
+      minutos.toString().padStart(2, '0'),
+      segundos.toString().padStart(2, '0')
+    ].join(':');
+  }
 }

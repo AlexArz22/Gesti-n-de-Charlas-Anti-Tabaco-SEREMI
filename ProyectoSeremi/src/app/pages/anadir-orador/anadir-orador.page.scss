@@ -1,0 +1,65 @@
+.titulo-pagina {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 21vw;
+    margin-top: 5rem;
+    color: #000;
+  }
+  
+  .ContenedorAñadirRut {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 600px;
+    background: #ffffff;
+    border: 2px solid #5c33f6;
+    border-radius: 12px;
+  
+    .icon {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 0.5rem;
+        color: #000000;
+    }
+  
+    ion-input {
+        flex: 1;
+        --background: #cccccc;
+        --placeholder-color: #888;
+        --border-radius: 5px;
+        color: #000;
+        font-size: 1.3rem;
+        border: none;
+        outline: none;
+    }
+  
+    .btn-agregar {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        --background: #3366ff;
+        --color: #fff;
+        padding: 0 1.2rem;
+        font-weight: 500;
+        text-transform: none;
+    }
+  }
+  
+  .btn-volver {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: #1c1c3e;
+    color: #fff;
+    border-radius: 999px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: none;
+    --background-hover: #2a2a5a;
+    --background-activated: #14142b;
+    --box-shadow: none;
+  }
+  
+  
