@@ -17,8 +17,8 @@ export class CharlasPage implements OnInit {
     //this.charlas = this.charlasService.obtenerCharlas();
   }
 
-  verCharla(charlaId: string) {
-    this.router.navigate(['/charla-especifica', charlaId]);
+  goToCharla() {
+    this.router.navigate(['/charla-especifica']);
   }
 
 }

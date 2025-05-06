@@ -34,7 +34,11 @@ const routes: Routes = [
   {
     path: 'actividad-especifica',
     loadChildren: () => import('./pages/actividad-especifica/actividad-especifica.module').then( m => m.ActividadEspecificaPageModule)
+  },  {
+    path: 'charla-especifica',
+    loadChildren: () => import('./pages/charla-especifica/charla-especifica.module').then( m => m.CharlaEspecificaPageModule)
   }
+
 
 ];
 @NgModule({
