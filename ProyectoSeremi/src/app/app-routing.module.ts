@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppLayoutComponent } from './components/app-layout/app-layout.component';
+import { AppComponent } from './app.component';
 
 // app-routing.module.ts
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
   // Rutas CON layout (sidebars + header condicional)
   {
     path: '',
-    component: AppLayoutComponent,
+    component: AppComponent,
     children: [
       { path: '', redirectTo: 'inicio-sesion', pathMatch: 'full' },
       { path: 'inicio-sesion', loadChildren: () => import('./pages/inicio-sesion/inicio-sesion.module').then(m => m.InicioSesionPageModule) },
@@ -26,7 +26,8 @@ const routes: Routes = [
       { path: 'crear-charla', loadChildren: () => import('./pages/crear-charla/crear-charla.module').then(m => m.CrearCharlaPageModule) },
       { path: 'perfil', loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilPageModule) }
     ]
-  },  {
+  },
+  {
     path: 'actividad-especifica',
     loadChildren: () => import('./pages/actividad-especifica/actividad-especifica.module').then( m => m.ActividadEspecificaPageModule)
   },
