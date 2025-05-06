@@ -1,5 +1,73 @@
 
 
 <ion-content [fullscreen]="true">
-
+    <div class="contenido-calendario">
+        
+        <h1 class="titulo-calendario">Calendario</h1>
+    
+        <ion-button expand="block" color="dark" class="volver-btn" (click)="BackButton()">
+          Volver al menú
+        </ion-button>
+    
+        <div class="calendario-central">
+          <ion-grid>
+            
+            <ion-row class="dias-semana">
+              <ion-col>Mo</ion-col>
+              <ion-col>Tu</ion-col>
+              <ion-col>We</ion-col>
+              <ion-col>Th</ion-col>
+              <ion-col>Fr</ion-col>
+              <ion-col>Sa</ion-col>
+              <ion-col>Su</ion-col>
+            </ion-row>
+    
+            <ion-row class="dias-semana">
+              <ion-col></ion-col>
+              <ion-col></ion-col>
+              <ion-col>1</ion-col>
+              <ion-col>2</ion-col>
+              <ion-col>3</ion-col>
+              <ion-col>4</ion-col>
+              <ion-col>5</ion-col>
+            </ion-row>
+            <ion-row class="dias-semana">
+              <ion-col>6</ion-col>
+              <ion-col>7</ion-col>
+              <ion-col>8</ion-col>
+              <ion-col>9</ion-col>
+              <ion-col>10</ion-col>
+              <ion-col class="evento">11</ion-col>
+              <ion-col class="evento">12</ion-col>
+            </ion-row>
+            <ion-row class="dias-semana">
+              <ion-col>13</ion-col>
+              <ion-col>14</ion-col>
+              <ion-col>15</ion-col>
+              <ion-col>16</ion-col>
+              <ion-col class="evento">17</ion-col>
+              <ion-col>18</ion-col>
+              <ion-col>19</ion-col>
+            </ion-row>
+            <ion-row class="dias-semana">
+              <ion-col class="evento">20</ion-col>
+              <ion-col>21</ion-col>
+              <ion-col>22</ion-col>
+              <ion-col>23</ion-col>
+              <ion-col>24</ion-col>
+              <ion-col>25</ion-col>
+              <ion-col>26</ion-col>
+            </ion-row>
+            <ion-row class="dias-semana">
+              <ion-col>27</ion-col>
+              <ion-col>28</ion-col>
+              <ion-col>29</ion-col>
+              <ion-col>30</ion-col>
+              <ion-col>31</ion-col>
+              <ion-col></ion-col>
+              <ion-col></ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
 </ion-content>
