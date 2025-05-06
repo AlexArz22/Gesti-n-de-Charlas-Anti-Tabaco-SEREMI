@@ -72,5 +72,14 @@ ion-content {
     margin: 0;
     padding: 0;
   }
+
+  .floating-button {
+    position: absolute;
+    top: 300px;
+    left: 150px; // o donde quieras posicionarlo
+    z-index: 1000; // más alto que el z-index del sidebar
+    //overflow-y: visible;
+    --overflow: visible;
+  }
   
   
