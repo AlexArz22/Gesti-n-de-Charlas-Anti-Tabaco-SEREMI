@@ -1,4 +1,4 @@
-<ion-content>
+<ion-content class="principal-content">
     <div class="contenedor-botones">
       <!-- Botón 1: Parte superior izquierda -->
       <ion-button color="primary" class="boton-izquierda" (click)="goToCalendario()">
@@ -26,11 +26,18 @@
           <ion-item>Charla 3</ion-item>
         </ion-list>
     </div>
-    <div class="floating-button">
+    <div slot = "fixed" class="floating-button">
       <ion-button color="primary">
         Botón flotante
       </ion-button>
     </div>
+
+    <ion-fab slot="fixed" vertical="top" horizontal="start" class="fab-prueba">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
 </ion-content>
 
 
