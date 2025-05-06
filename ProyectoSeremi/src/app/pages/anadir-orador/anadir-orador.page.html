@@ -1,0 +1,23 @@
+<ion-content [fullscreen] class="ion-padding">
+  <div class="titulo-pagina">Agregar Orador</div>
+
+  <div class="ContenedorAñadirRut">
+    <ion-icon name="person-add-outline" class="icon"></ion-icon>
+    <ion-input
+      placeholder="Ingrese rut"
+      [(ngModel)]="rutValue"
+      class="input-rut"
+      type="text"
+    ></ion-input>
+
+
+    <ion-button (click)="onAgregar()" expand="block" class="btn-agregar">
+      Agregar
+    </ion-button>
+
+  </div>
+
+  <ion-button fill="clear" class="btn-volver" (click)="onVolver()">
+    Volver a charla
+  </ion-button>
+</ion-content>
