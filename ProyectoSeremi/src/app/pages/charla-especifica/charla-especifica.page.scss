@@ -1,0 +1,43 @@
+ion-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  /* Alinea los botones a la derecha */
+    justify-content: flex-start; /* Asegura que los botones estén arriba */
+    width: auto;  /* Asegura que ocupe solo el espacio necesario */
+  }
+  
+  
+  
+  ion-row {
+    height: 100%; /* Asegura que el row ocupe toda la altura disponible */
+    width: 100%; /* Asegura que el row ocupe todo el ancho disponible */
+  }
+  
+  
+  .volver-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #2e2b3d;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .boton-ancho {
+    min-width: 200px;    // Ancho mínimo del botón
+    padding: 12px 24px;  // Añadir espaciado adicional horizontal
+    font-size: 16px;     // Tamaño del texto (opcional)
+  }
+
+  .boton-ancho {
+  min-width: 200px;    // Ancho mínimo del botón
+  padding: 16px 24px;  // Aumenta el padding vertical (altura) y horizontal
+  font-size: 16px;     // Tamaño del texto (opcional)
+}
+
+  

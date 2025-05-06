@@ -20,5 +20,7 @@ export class CharlasPage implements OnInit {
   goToCharla() {
     this.router.navigate(['/charla-especifica']);
   }
-
+  goToMenu() {
+    this.router.navigate(['/principal']);
+  }
 }
