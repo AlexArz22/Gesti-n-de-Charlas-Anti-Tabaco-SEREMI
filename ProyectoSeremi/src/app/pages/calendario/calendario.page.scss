@@ -1,0 +1,32 @@
+.contenido-calendario {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .volver-btn {
+    margin: 20px 0 20px auto;
+    width: 200px;
+    display: block;
+  }
+  
+  .calendario-central {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  ion-row {
+    text-align: center;
+  }
+  
+  ion-col {
+    border: 1px solid #ccc;
+    padding: 10px 0;
+  }
+  
+  .evento {
+    background-color: #f88;
+    color: white;
+    font-weight: bold;
+  }
+  
