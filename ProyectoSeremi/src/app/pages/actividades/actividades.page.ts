@@ -15,7 +15,12 @@ export class ActividadesPage implements OnInit {
     this.router.navigate(['/actividad-especifica']);
   }
 
+  irACrearActividad(){
+    this.router.navigate(['/crear-actividad']);
+  }
+
   ngOnInit() {
   }
+
 
 }

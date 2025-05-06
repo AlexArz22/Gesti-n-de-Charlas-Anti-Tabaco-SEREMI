@@ -24,7 +24,11 @@ const routes: Routes = [
       
       { path: 'charla-especifica/:id', loadChildren: () => import('./pages/charla-especifica/charla-especifica.module').then(m => m.CharlaEspecificaPageModule) },
       { path: 'crear-charla', loadChildren: () => import('./pages/crear-charla/crear-charla.module').then(m => m.CrearCharlaPageModule) },
-      { path: 'perfil', loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilPageModule) }
+      { path: 'perfil', loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilPageModule) },
+      {
+        path: 'crear-actividad',
+        loadChildren: () => import('./pages/crear-actividad/crear-actividad.module').then( m => m.CrearActividadPageModule)
+      }
     ]
   },
   {
@@ -34,10 +38,12 @@ const routes: Routes = [
   {
     path: 'actividad-especifica',
     loadChildren: () => import('./pages/actividad-especifica/actividad-especifica.module').then( m => m.ActividadEspecificaPageModule)
-  },  {
+  },
+  {
     path: 'charla-especifica',
     loadChildren: () => import('./pages/charla-especifica/charla-especifica.module').then( m => m.CharlaEspecificaPageModule)
-  }
+  },
+  
 
 
 ];
