@@ -1,0 +1,92 @@
+.editor-charla-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0.5vw 0 25vw; 
+    padding-top: 70px; 
+    min-height: calc(100vh - 70px);
+  }
+  
+  .formulario {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    border-radius: 16px;
+  
+    ion-input,
+    ion-textarea {
+      border: 1.5px solid #5c33f6;
+      border-radius: 0.5vw;
+      padding: 0.6rem;
+      color: #000;
+    }
+  
+    ion-input[disabled] {
+      --background: #d9d9d9;
+      color: #555;
+    }
+  
+    .temario-label {
+      background-color: #a3a3ff;
+      color:#000;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 4px 4px 0 0;
+      margin-top: 1rem;
+    }
+  
+    ion-textarea {
+      min-height: 80px;
+    }
+  }
+
+  .titulo-editor {
+    position: absolute;
+    top: 80px;
+    left: 1vw;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1rem;
+  }
+  
+  .Botones {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-left: 2rem;
+    align-items: stretch;
+    justify-content: flex-start;
+  
+    .action-button {
+      --background: #5c33f6;
+      --color: white;
+      --border-radius: 10px;
+      height: 70px;
+      font-weight: bold;
+      text-transform: none;
+      max-width: 12vw; 
+    }
+  }
+  
+  .btn-volver {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+  
+    --background: #1c1c3e;
+    --color: #ffffff;
+    --border-radius: 999px;
+    --padding-start: 1.5rem;
+    --padding-end: 1.5rem;
+    --padding-top: 0.5rem;
+    --padding-bottom: 0.5rem;
+  
+    font-weight: 500; text-transform: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    --background-hover: #2a2a5a;
+    --background-activated: #14142b;
+  }

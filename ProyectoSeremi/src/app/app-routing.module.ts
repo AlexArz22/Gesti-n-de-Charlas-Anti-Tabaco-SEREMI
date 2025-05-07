@@ -66,6 +66,10 @@ const routes: Routes = [
   {
     path: 'seleccionar-actividad',
     loadChildren: () => import('./pages/seleccionar-actividad/seleccionar-actividad.module').then( m => m.SeleccionarActividadPageModule)
+  },
+  {
+    path: 'editar-charla-especifica',
+    loadChildren: () => import('./pages/editar-charla-especifica/editar-charla-especifica.module').then( m => m.EditarCharlaEspecificaPageModule)
   }
 
 
