@@ -46,7 +46,11 @@ const routes: Routes = [
   {
     path: 'anadir-orador',
     loadChildren: () => import('./pages/anadir-orador/anadir-orador.module').then( m => m.AnadirOradorPageModule)
+  },  {
+    path: 'editar-charla-especifica',
+    loadChildren: () => import('./pages/editar-charla-especifica/editar-charla-especifica.module').then( m => m.EditarCharlaEspecificaPageModule)
   }
+
 
 
 ];
