@@ -23,6 +23,15 @@ export class CharlaEspecificaPage implements OnInit {
   goToCharlas(){
     this.router.navigate(['/charlas']);
   }
+  goToSeleccionarActividad(){
+    this.router.navigate(['/seleccionar-actividad']);
+  }
+  goToSeleccionarArchivo(){
+    this.router.navigate(['/seleccionar-archivo']);
+  }
+  goToRegistrarAsistentes(){
+    this.router.navigate(['/registrar-asistentes']);
+  }
 
   toggleContador() {
     if (!this.botonIniciado) {

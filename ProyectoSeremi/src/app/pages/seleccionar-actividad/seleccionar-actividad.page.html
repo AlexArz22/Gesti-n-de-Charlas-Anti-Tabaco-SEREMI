@@ -1,0 +1,17 @@
+<div class="contenedor">
+  <h2>Actividades asignadas</h2>
+
+  <div class="lista">
+    <div class="item" *ngFor="let actividad of actividades">
+      <div class="nombre">
+        <i class="fas fa-file-alt"></i>
+        {{ actividad.nombre }}
+      </div>
+      <button class="boton" (click)="seleccionar(actividad.nombre)">
+        <i class="fas fa-play"></i>
+      </button>
+    </div>
+  </div>
+
+  <button class="volver"(click)="goToCharlaEspecifica()">Volver a charla</button>
+</div>
