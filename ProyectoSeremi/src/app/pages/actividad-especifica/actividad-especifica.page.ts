@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-actividad-especifica',
@@ -8,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActividadEspecificaPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  irAActividadIniciada() {
+    this.router.navigate(['/actividad-iniciada']);
+  }
+  irAeditandoActividad() {
+    this.router.navigate(['/editando-actividad']);
+  }
 }

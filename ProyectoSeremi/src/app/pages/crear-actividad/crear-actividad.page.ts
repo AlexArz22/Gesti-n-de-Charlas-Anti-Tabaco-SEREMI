@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crear-actividad',
@@ -8,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearActividadPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  irACreandoActividad() {
+    this.router.navigate(['/creando-actividad']);
   }
 
 }

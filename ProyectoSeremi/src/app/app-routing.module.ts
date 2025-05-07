@@ -36,17 +36,25 @@ const routes: Routes = [
     loadChildren: () => import('./pages/actividad-especifica/actividad-especifica.module').then( m => m.ActividadEspecificaPageModule)
   },
   {
-    path: 'actividad-especifica',
-    loadChildren: () => import('./pages/actividad-especifica/actividad-especifica.module').then( m => m.ActividadEspecificaPageModule)
-  },
-  {
     path: 'charla-especifica',
     loadChildren: () => import('./pages/charla-especifica/charla-especifica.module').then( m => m.CharlaEspecificaPageModule)
   },
   {
     path: 'anadir-orador',
     loadChildren: () => import('./pages/anadir-orador/anadir-orador.module').then( m => m.AnadirOradorPageModule)
+  },  {
+    path: 'creando-actividad',
+    loadChildren: () => import('./pages/creando-actividad/creando-actividad.module').then( m => m.CreandoActividadPageModule)
+  },
+  {
+    path: 'editando-actividad',
+    loadChildren: () => import('./pages/editando-actividad/editando-actividad.module').then( m => m.EditandoActividadPageModule)
+  },
+  {
+    path: 'actividad-iniciada',
+    loadChildren: () => import('./pages/actividad-iniciada/actividad-iniciada.module').then( m => m.ActividadIniciadaPageModule)
   }
+
 
 
 ];

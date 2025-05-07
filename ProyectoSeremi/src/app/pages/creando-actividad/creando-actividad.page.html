@@ -1,0 +1,84 @@
+<ion-content class="contenido-creacion">
+
+  <h2 class="titulo-creacion">CREACIÓN DE ACTIVIDADES</h2>
+  <div *ngIf="completado">
+  <!-- Pregunta -->
+  <div class="pregunta-container">
+    <input
+      class="input-pregunta"
+      type="text"
+      placeholder="*Introduzca pregunta"
+      [(ngModel)]="pregunta" />
+  </div>
+
+    <!-- Alternativas en 2×2 -->
+    <ion-grid class="mi-grid-centro">
+      <ion-row class="justificar-centro">
+        <ion-col size="6">
+          <div class="alternativa-item">
+            <div class="selector-correcta"
+                [class.activa]="alternativas[0].esCorrecta"
+                (click)="esCorrecta(0)"></div>
+            <input class="input-alternativa"
+                  [(ngModel)]="alternativas[0].texto"
+                  placeholder="*Alternativa 1" />
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <div class="alternativa-item">
+            <div class="selector-correcta"
+                [class.activa]="alternativas[1].esCorrecta"
+                (click)="esCorrecta(1)"></div>
+            <input class="input-alternativa"
+                  [(ngModel)]="alternativas[1].texto"
+                  placeholder="*Alternativa 2" />
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row class="justificar-centro">
+        <ion-col size="6">
+          <div class="alternativa-item">
+            <div class="selector-correcta"
+                [class.activa]="alternativas[2].esCorrecta"
+                (click)="esCorrecta(2)"></div>
+            <input class="input-alternativa"
+                  [(ngModel)]="alternativas[2].texto"
+                  placeholder="*Alternativa 3" />
+          </div>
+        </ion-col>
+        <ion-col size="6">
+          <div class="alternativa-item">
+            <div class="selector-correcta"
+                [class.activa]="alternativas[3].esCorrecta"
+                (click)="esCorrecta(3)"></div>
+            <input class="input-alternativa"
+                  [(ngModel)]="alternativas[3].texto"
+                  placeholder="*Alternativa 4" />
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Texto de ayuda -->
+    <div class="texto-ayuda">
+      *Debes marcar las alternativas que consideras correctas para la pregunta
+    </div>
+
+    <button class="crear-btn" (click)="apretarCompletar()">
+      Finalizar Creación
+    </button>
+  
+</div>
+
+  <div *ngIf= "completado === false" class="exitosa" >
+    <p>Actividad realizada de manera exitosa.</p>
+  </div>
+
+
+
+
+  <button class="volver-actividades" (click)="irAActividades()">
+    Volver a Actividades
+  </button>
+
+</ion-content>
