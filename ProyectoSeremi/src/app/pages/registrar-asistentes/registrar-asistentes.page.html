@@ -1,0 +1,31 @@
+<div class="registrar-asistentes-container">
+  <h2>Registro de asistencia</h2>
+
+  <form #asistenciaForm="ngForm">
+    <input
+      type="number"
+      name="asistentes"
+      placeholder="Asistentes"
+
+      required
+    />
+    <input
+      type="number"
+      name="hombres"
+      placeholder="Hombres"
+
+      required
+    />
+    <input
+      type="number"
+      name="mujeres"
+      placeholder="Mujeres"
+
+      required
+    />
+
+    <button type="submit" class="btn-guardar">Guardar Asistencia</button>
+  </form>
+
+  <button class="btn-volver"(click)="goToCharlaEspecifica()">Volver a charla</button>
+</div>

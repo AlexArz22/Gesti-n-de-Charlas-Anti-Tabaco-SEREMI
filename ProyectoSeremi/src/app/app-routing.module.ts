@@ -42,7 +42,8 @@ const routes: Routes = [
   {
     path: 'anadir-orador',
     loadChildren: () => import('./pages/anadir-orador/anadir-orador.module').then( m => m.AnadirOradorPageModule)
-  },  {
+  },
+  {
     path: 'creando-actividad',
     loadChildren: () => import('./pages/creando-actividad/creando-actividad.module').then( m => m.CreandoActividadPageModule)
   },
@@ -53,6 +54,18 @@ const routes: Routes = [
   {
     path: 'actividad-iniciada',
     loadChildren: () => import('./pages/actividad-iniciada/actividad-iniciada.module').then( m => m.ActividadIniciadaPageModule)
+  },
+  {
+    path: 'seleccionar-archivo',
+    loadChildren: () => import('./pages/seleccionar-archivo/seleccionar-archivo.module').then( m => m.SeleccionarArchivoPageModule)
+  },
+  {
+    path: 'registrar-asistentes',
+    loadChildren: () => import('./pages/registrar-asistentes/registrar-asistentes.module').then( m => m.RegistrarAsistentesPageModule)
+  },
+  {
+    path: 'seleccionar-actividad',
+    loadChildren: () => import('./pages/seleccionar-actividad/seleccionar-actividad.module').then( m => m.SeleccionarActividadPageModule)
   }
 
 
