@@ -10,8 +10,13 @@ import { Router } from '@angular/router';
 export class ActividadEspecificaPage implements OnInit {
 
   constructor(private router: Router) { }
+  completado: boolean = true;
 
   ngOnInit() {
+  }
+
+  apretarEliminar() {
+    this.completado = false;
   }
 
   irAActividadIniciada() {
@@ -19,5 +24,9 @@ export class ActividadEspecificaPage implements OnInit {
   }
   irAeditandoActividad() {
     this.router.navigate(['/editando-actividad']);
+  }
+
+  irAActividades() {
+    this.router.navigate(['/actividades']);
   }
 }

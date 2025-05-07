@@ -1,13 +1,48 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>editandoActividad</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="contenido-creacion">
+  <h2 class="titulo-creacion">EDICIÓN DE ACTIVIDAD</h2>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">editandoActividad</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div *ngIf="completado">
+    <!-- Pregunta -->
+    <div class="pregunta-container">
+      <input
+        class="input-pregunta"
+        type="text"
+        placeholder="*Introduzca pregunta"
+        [(ngModel)]="pregunta" />
+    </div>
+
+    <!-- Alternativas en 2×2 -->
+    <ion-grid class="mi-grid-centro">
+      <ion-row class="justificar-centro">
+        <ion-col size="12" sizeMd="6" *ngFor="let alternativa of alternativas; let i = index">
+          <div class="alternativa-item">
+            <div class="selector-correcta"
+                 [class.activa]="alternativa.esCorrecta"
+                 (click)="esCorrecta(i)"></div>
+            <input class="input-alternativa"
+                   [(ngModel)]="alternativa.texto"
+                   [placeholder]="'*Alternativa ' + (i + 1)" />
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Texto de ayuda -->
+    <div class="texto-ayuda">
+      *Debes marcar las alternativas que consideras correctas para la pregunta
+    </div>
+
+    <button class="crear-btn" (click)="apretarCompletar()">
+      Finalizar Edición
+    </button>
+  </div>
+
+  <!-- Éxito -->
+  <div *ngIf="!completado" class="exitosa">
+    <p>Actividad editada de manera exitosa.</p>
+  </div>
+
+  <button class="volver-actividades" (click)="irAActividades()">
+    Volver a Actividades
+  </button>
 </ion-content>

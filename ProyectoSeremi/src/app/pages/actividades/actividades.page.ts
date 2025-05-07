@@ -21,6 +21,8 @@ export class ActividadesPage implements OnInit {
 
   ngOnInit() {
   }
-
+  goToPrincipal() {
+    this.router.navigate(['/principal']);
+  }
 
 }

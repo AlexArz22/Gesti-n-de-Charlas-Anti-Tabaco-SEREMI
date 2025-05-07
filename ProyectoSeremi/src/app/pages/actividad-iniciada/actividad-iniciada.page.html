@@ -1,13 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>actividadIniciada</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content class="contenido-creacion">
+  <h2 class="titulo">Actividad: Fumar te da cáncer</h2>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">actividadIniciada</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="pregunta-container">
+    <input
+      class="input-pregunta"
+      type="text"
+      [(ngModel)]="pregunta"
+      [readonly]="true" />
+  </div>
+
+  <!-- Alternativas en 2×2 -->
+  <ion-grid class="mi-grid-centro">
+    <ion-row class="justificar-centro">
+      <ion-col size="12" sizeMd="6" *ngFor="let alternativa of alternativas; let i = index">
+        <div class="alternativa-item"
+             [ngClass]="{
+               'correcta': mostrarResultado && alternativa.esCorrecta,
+               'incorrecta': mostrarResultado && seleccionUsuario === i && !alternativa.esCorrecta
+             }"
+             (click)="seleccionarAlternativa(i)">
+          <span class="letra">{{ alternativa.texto.charAt(0) }}</span>
+          <span class="texto">{{ alternativa.texto.slice(3) }}</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <button class="crear-btn" (click)="apretarAbandonar()">Finalizar Actividad</button>
 </ion-content>
