@@ -1,38 +1,104 @@
-ion-content {
-    --padding-top: 20px;
-    --padding-start: 16px;
-    --padding-end: 16px;
-    background: #f8f9fa;
-  }
-  
-  ion-item {
-    margin-bottom: 12px;
-    border-radius: 8px;
-    --background: #ffffff;
-    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  ion-label {
-    font-weight: 500;
-    color: #333;
-  }
-  
-  ion-input {
-    --padding-top: 10px;
-    --padding-bottom: 10px;
-  }
-  
-  ion-note[color="danger"] {
-    font-size: 0.75rem;
-    margin-top: -8px;
-    margin-left: 12px;
-    color: #eb445a;
-  }
-  
+.registro-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 4vh 20vw;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.registro-titulo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  color: #000;
+  padding-right: 2vw;
+}
+
+.registro-titulo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.registro-formulario {
+  flex: 1;
+  color: #000;
+  max-width: 320px;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.registro-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 2px;
+  margin-top: 8px;
+  align-self: flex-start; 
+}
+
+.campo {
+  width: 100%;
+  margin-bottom: 6px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 2px 8px;
+  background: #fff;
+}
+
+ion-input {
+  width: 100%;
+  font-size: 0.8rem;
+  color: #000;
+  --padding-start: 0;
+  --padding-end: 0;
+  --highlight-color-focused: transparent;
+}
+
+ion-input::part(native) {
+  color: #000;
+  font-size: 0.8rem;
+  padding: 4px 0;
+}
+
+.extras {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+  margin-top: 0.75rem;
+}
+
+.cuenta-existente {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
   ion-button {
-    margin: 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 12px;
+    --background: transparent;
+    --color: #007bff; // color típico de link
+    --box-shadow: none;
+    padding: 0;
+    font-size: 0.7rem;
+    text-decoration: underline;
+    font-weight: normal;
   }
-  
+
+  ion-icon {
+    color: #007bff;
+    font-size: 1.2rem;
+  }
+}
+
+.btn-registrarse {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+}

@@ -1,23 +1,86 @@
-ion-item {
-    --background: #ffffff; /* Fondo blanco para el item */
-    --border-color: #080808; /* Color de borde si lo necesitas */
-    --color: #020202;
-}
-
-ion-input {
-    //--background: #ffffff; /* Fondo blanco para los inputs */
-    --color: #000000; /* Color del texto del input */
-}
-
-ion-label {
-    --color: #000000; 
-}
-
 .login-wrapper {
     max-width: 400px;
-    margin: auto;
+    margin: 4rem auto;
     padding: 2rem;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: left;
+    color: #000;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: #000;
+  }
+  
+  .form-group ion-input {
+    --background: white;
+    --padding-start: 0.75rem;
+    --padding-end: 0.75rem;
+    --padding-top: 0.6rem;
+    --padding-bottom: 0.6rem;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #000;
+  }
+  
+  .forgot-password {
+    text-align: right;
+    margin-bottom: 1.5rem;
+  }
+  
+  .forgot-password ion-button {
+    --background: transparent;
+    --color: #333;
+    font-size: 0.9rem;
+    text-transform: none;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  ion-button {
+    --border-radius: 6px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: none;
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+  
+  ion-button:first-child {
+    --background: #0066cc;
+    --color: #fff;
+  }
+  
+  ion-button ion-icon {
+    margin-right: 0.5rem;
+  }
+  
+  .register-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #000;
+  }
+  
