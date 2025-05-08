@@ -1,4 +1,4 @@
-<ion-content class="contenido-creacion">
+<ion-content class="contenido-edicion" >
   <h2 class="titulo-creacion">EDICIÓN DE ACTIVIDAD</h2>
 
   <div *ngIf="completado">
@@ -32,17 +32,17 @@
       *Debes marcar las alternativas que consideras correctas para la pregunta
     </div>
 
-    <button class="crear-btn" (click)="apretarCompletar()">
+    <button class="finalizar-btn" (click)="apretarCompletar()">
       Finalizar Edición
     </button>
   </div>
 
   <!-- Éxito -->
-  <div *ngIf="!completado" class="exitosa">
+  <div *ngIf="completado === false" class="exitosa">
     <p>Actividad editada de manera exitosa.</p>
   </div>
 
-  <button class="volver-actividades" (click)="irAActividades()">
+  <ion-button class="volver-btn" (click)="irAActividades()" shape="round" >
     Volver a Actividades
-  </button>
+  </ion-button>
 </ion-content>

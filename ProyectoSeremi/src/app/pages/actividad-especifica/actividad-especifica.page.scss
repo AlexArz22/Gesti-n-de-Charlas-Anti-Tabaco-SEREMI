@@ -45,35 +45,49 @@
     background-color: #5f60d3;
   }
   
-  .eliminar-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #7879f1;
-    color: white;
-    border: none;
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    z-index: 10;
-  }
+  .volver-btn,
+.eliminar-btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  max-width: 45%;
+  width: auto;
+  text-transform: none;
+}
   
-  .volver-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #2e2b3d;
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    z-index: 10;
-  }
-  
+.volver-btn {
+  left: 10px;
+  --background: #2e2b3d;
+  --color: white;
+}
 
+.eliminar-btn {
+  right: 10px;
+  --background: #7879f1;
+  --color: white;
+  white-space: normal;
+  text-align: center;
+  height: 10%;
+
+}
+
+@media (max-width: 500px) {
+  .principal{
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .volver-btn,
+  .crear-actividad-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.6rem;
+    max-width: 45%;
+  }
+
+}
   .exitosa {
     width: 90%;
     max-width: 400px;

@@ -30,7 +30,12 @@ export class EditandoActividadPage implements OnInit {
     this.completado = false;
   }
 
+  devolver() {
+    this.completado = true;
+  }
+
   irAActividades() {
+    this.devolver()
     this.router.navigate(['/actividades']);
   }
 }

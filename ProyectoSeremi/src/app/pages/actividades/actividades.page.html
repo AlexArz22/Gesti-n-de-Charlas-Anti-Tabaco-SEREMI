@@ -1,19 +1,26 @@
 <ion-content>
+  <div class="actividades-container">
+    
+    <h1>Actividades</h1>
 
-    <div class="actividades-container">
+    <div class="lista-actividades">
+      <ion-button expand="block" fill="solid" class="actividad-btn" (click)="goToActividad()"> Actividad Fumar te da Cáncer </ion-button>
       
-      <h1>Actividades</h1>
-  
-      <div class="lista-actividades">
-        <button class="actividad-btn" (click)="goToActividad()">Actividad Fumar te da Cancer</button>
-        <button class="actividad-btn">Actividad El Vaper y sus efectos a largo plazo</button>
-        <button class="actividad-btn">Actividad Tabaco y sus consecuencias</button>
-        <button class="actividad-btn">Actividad Componentes del cigarro</button>
-      </div>
-  
-      <button class="volver-btn" (click)="goToPrincipal()">Volver al menú</button>
-      <button class="crear-actividad-btn" (click) = "irACrearActividad()">Crear Actividad Nueva</button>
-      
+      <ion-button expand="block" fill="solid" class="actividad-btn"> Actividad El Vaper y sus efectos a largo plazo </ion-button>
+        
+      <ion-button expand="block" fill="solid" class="actividad-btn"> Actividad Tabaco y sus consecuencias </ion-button>
+        
+      <ion-button expand="block" fill="solid" class="actividad-btn"> Actividad Componentes del cigarro </ion-button>
+        
     </div>
-  
-  </ion-content>
+
+    <ion-button class="volver-btn" (click)="goToPrincipal()" shape="round">
+      Volver al menú
+    </ion-button>
+
+    <ion-button class="crear-actividad-btn" (click)="irACrearActividad()" shape="round">
+      Crear Actividad Nueva
+    </ion-button>
+
+  </div>
+</ion-content>

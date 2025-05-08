@@ -18,4 +18,8 @@ export class CrearActividadPage implements OnInit {
     this.router.navigate(['/creando-actividad']);
   }
 
+  irAActividades() {
+    this.router.navigate(['/actividades']);
+  }
+
 }

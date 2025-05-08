@@ -1,5 +1,5 @@
 
-<ion-content class="principal">
+<ion-content class="principal" >
   
   <div *ngIf="completado">
     <div class="actividad-container">
@@ -12,14 +12,14 @@
         <button class="boton-accion" (click)="irAeditandoActividad()">Editar Actividad</button>
       </div>
 
-      <button class="eliminar-btn" (click)="apretarEliminar()">Eliminar Actividad</button>
+      <ion-button class="eliminar-btn" (click)="apretarEliminar()">Eliminar Actividad</ion-button>
       
-
     </div>
   </div>
-  <button class="volver-btn" (click)="irAActividades()">Volver a actividades</button>
+  <ion-button class="volver-btn" (click)="irAActividades()">Volver a actividades</ion-button>
   <div *ngIf= "completado === false" class="exitosa" >
     <p>Actividad eliminada de manera exitosa.</p>
   </div>
+
 </ion-content>
 

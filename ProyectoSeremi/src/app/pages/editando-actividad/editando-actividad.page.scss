@@ -1,9 +1,11 @@
-.contenido-creacion {
+.contenido-edicion {
     padding: 1rem;
     top: 65px;
     display: flex;
     flex-direction: column;
+    //overflow-y: auto;
     align-items: center;
+    //bottom: 5rem;
   }
   
   .titulo-creacion {
@@ -31,6 +33,12 @@
     @media (max-width: 768px) {
       width: 90%;
       padding: 1rem;
+      
+      .contenido-creacion{
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+      
     }
   }
   
@@ -52,8 +60,9 @@
     border: 2px solid #ccc;
     border-radius: 8px;
     padding: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.01rem;
     background-color: #f9f9f9;
+    flex-wrap: wrap;
   }
   
   .input-alternativa {
@@ -64,6 +73,7 @@
     background-color: white;
     color: #333;
     padding: 0.8rem;
+    min-width: 0;
   }
   
   .selector-correcta {
@@ -86,7 +96,7 @@
     font-style: italic;
   }
   
-  .crear-btn {
+  .finalizar-btn {
     display: block;
     margin: 2rem auto 0 auto;
     background-color: #7879f1;
@@ -96,6 +106,8 @@
     border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
+    font-size: 90%;
+    max-width: 60%;
   }
   
   .exitosa {
@@ -115,17 +127,56 @@
     }
   }
   
-  .volver-actividades {
+  // .volver-actividades {
+  //   position: fixed;
+  //   bottom: 1rem;
+  //   left: 1rem;
+  //   background-color: #2e2b3d;
+  //   color: #fff;
+  //   border: none;
+  //   padding: 0.75rem 1.25rem;
+  //   border-radius: 20px;
+  //   font-size: 0.9rem;
+  //   cursor: pointer;
+  //   z-index: 100;
+  // }
+
+  .volver-btn {
     position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    background-color: #2e2b3d;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.25rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    z-index: 100;
+    bottom: 20px;
+    z-index: 10;
+    white-space: nowrap;
+    font-size: 82%;
+    max-width: 45%;
+    width: auto;
+    text-transform: none;
+    left: 10px;
+    --background: #010101;
+    --color: white;
+    padding: 1rem 2rem;
+  }
+
+  @media (max-width: 600px) {
+    .alternativa-item {
+      padding: 0.6rem;
+    }
+  
+    .input-alternativa {
+      font-size: 0.9rem;
+      padding: 0.6rem;
+    }
+    .volver-btn {
+      left: 10px;
+      --background: #2e2b3d;
+      --color: white;
+      padding: 0.6rem 1rem;
+    }
+    .finalizar-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+      margin: 0;
+      z-index: 100;
+    }
   }
   
