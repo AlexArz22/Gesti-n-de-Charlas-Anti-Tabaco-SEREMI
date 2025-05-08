@@ -1,29 +1,32 @@
 <div class="login-wrapper">
-  <h2>Iniciar Sesión</h2>
+  <h2>Iniciar sesión</h2>
 
-  <ion-list>
-    <ion-item>
-      <ion-label position="floating">Correo electrónico</ion-label>
-      <ion-input placeholder="Ingrese Correo"></ion-input>
-    </ion-item>
+  <div class="form-group">
+    <label>Correo electrónico</label>
+    <ion-input placeholder="*Ingrese correo" type="email"></ion-input>
+  </div>
 
-    <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input placeholder="Ingrese Contraseña" type="password"></ion-input>
-    </ion-item>
-  </ion-list>
+  <div class="form-group">
+    <label>Contraseña</label>
+    <ion-input placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
+  </div>
 
-  <div class="ion-padding">
+  <div class="buttons">
     <ion-button expand="block" (click)="irAPrincipal()">
-      Iniciar Sesión
+      <ion-icon name="log-in-outline" slot="start"></ion-icon>
+      Iniciar sesión
     </ion-button>
 
-    <ion-button expand="block" fill="clear" (click)="irARegistro()">
-      ¿No tienes cuenta? Regístrate
-    </ion-button>
+    <div class="register-section">
+      <span>¿Nuevo usuario?</span>
+      <ion-button (click)="irARegistro()">
+        <ion-icon name="people-outline" slot="start"></ion-icon>
+        Registrarse
+      </ion-button>
+    </div>
 
-    <ion-button expand="block" fill="clear" (click)="irARecuperarContrasena()">
-      ¿Olvidaste tu contraseña?
-    </ion-button>
+    <div class="forgot-password">
+      <ion-button fill="clear" (click)="irARecuperarContrasena()">¿Olvidaste tu Contraseña?</ion-button>
+    </div>
   </div>
 </div>
