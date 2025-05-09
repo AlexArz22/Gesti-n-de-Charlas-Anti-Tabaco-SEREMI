@@ -1,11 +1,13 @@
 .perfil-background {
-  display: flex;
-  top: 70px;
+   display: flex;
+  top: 60px;
+  --padding-bottom: 3rem; // Para evitar que los botones queden pegados al borde inferior
 }
 
 .perfil-container {
   max-width: 900px;
   margin: auto;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +15,6 @@
 
 .perfil-header {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .perfil-icon {
@@ -27,13 +28,13 @@ ion-grid {
 
 ion-row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 ion-col {
   padding: 0 1rem;
 }
 
-/* Estilos nuevos para campos */
 .campo {
   margin-bottom: 1rem;
 }
@@ -57,33 +58,51 @@ ion-col {
 }
 
 .boton-volver {
-  position: fixed;
-  z-index: 10;
-  white-space: nowrap;
-  font-size: 0.95rem;
-  padding: 0.5rem 1rem;
-  max-width: 45%;
-  width: auto;
-  text-transform: none;
-  bottom: 1rem;
-  left: 1rem;
+  width: 100%;
+  max-width: 300px;
   --background: #2e2b3d;
   --color: white;
+
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1000;
 }
 
 .boton-editar {
   --background: #7879f1;
   --color: white;
-  //height: 10%;
   border-radius: 10px;
+  margin-top: 1.5rem;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
 }
 
 @media (max-width: 600px) {
   ion-col {
-    width: 100%;
+    width: 100% !important;
+    padding: 0;
   }
 
   ion-row {
     flex-direction: column;
+  }
+
+  .perfil-icon {
+    font-size: 48px;
+  }
+
+  .boton-volver {
+    position: relative;
+    left: auto;
+    bottom: auto;
+  }
+
+  .boton-editar,
+  .boton-volver {
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: none;
   }
 }
