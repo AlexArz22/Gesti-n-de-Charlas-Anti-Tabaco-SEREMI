@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 interface Archivo {
   nombre: string;
@@ -13,7 +13,7 @@ interface Archivo {
 })
 export class AnadirArchivoACharlaPage implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private location: Location) {}
 
   archivosDisponibles: Archivo[] = [
     { nombre: 'Efectos_del_cigarro_en_pulmones.pdf' }
@@ -31,8 +31,8 @@ export class AnadirArchivoACharlaPage implements OnInit {
     this.archivosSeleccionados = this.archivosSeleccionados.filter(a => a !== archivo);
   }
   
-  goToCharlaEspecifica(): void {
-    this.router.navigate(['/editar-charla-especifica']);
+  volver(): void {
+    this.location.back();
   }
 
   ngOnInit() {

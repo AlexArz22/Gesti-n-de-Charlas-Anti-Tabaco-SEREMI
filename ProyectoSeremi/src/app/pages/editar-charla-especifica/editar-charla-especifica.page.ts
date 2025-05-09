@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-editar-charla-especifica',
@@ -15,18 +16,18 @@ export class EditarCharlaEspecificaPage implements OnInit {
   curso: string = '';
   temario: string = '';// todo esto aun estara por verse para la entrega 2
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private location: Location) { }
 
   guardarCambios() {
     this.router.navigate(['/charla-especifica']);
   }
 
   agregarActividades() {
-    // meter esta funcion 
+    this.router.navigate(['/anadir-actividad-a-charla']);
   }
 
   agregarContenido() {
-    // meter esta funcion 
+    this.router.navigate(['/anadir-archivo-a-charla']);
   }
 
   asignarOradores() {
@@ -34,7 +35,7 @@ export class EditarCharlaEspecificaPage implements OnInit {
   }
 
   volver() {
-    this.router.navigate(['/charla-especifica']); // Ajusta la ruta si es necesario
+    this.location.back();
   }
 
   ngOnInit() {

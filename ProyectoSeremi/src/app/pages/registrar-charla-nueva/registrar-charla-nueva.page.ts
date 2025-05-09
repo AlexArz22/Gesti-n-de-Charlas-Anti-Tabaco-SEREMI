@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-registrar-charla-nueva',
@@ -17,42 +18,30 @@ export class RegistrarCharlaNuevaPage implements OnInit {
 
   origen: string | null = null;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(private router: Router, private location: Location) {}
   
   guardarCambios() {
-    this.router.navigate(['/charla-especifica']);
+    this.location.back();
   }
 
   agregarActividades() {
-    this.router.navigate(['/anadir-actividad-a-charla'], {
-      queryParams: { origen: 'registrar' }
-    });
+    this.router.navigate(['/anadir-actividad-a-charla']);
   }
   
   agregarContenido() {
-    this.router.navigate(['/anadir-archivo-a-charla'], {
-      queryParams: { origen: 'registrar' }
-    });
+    this.router.navigate(['/anadir-archivo-a-charla']);
   }
   
-
   asignarOradores() {
     this.router.navigate(['/anadir-orador']);
   }
 
   volver(): void {
-    if (this.origen === 'registrar') {
-      this.router.navigate(['/registrar-charla-nueva']);
-    } else {
-      this.router.navigate(['/editar-charla-especifica']);
-    }
+    this.location.back();
   }
   
 
-  ngOnInit(): void {
-    this.route.queryParamMap.subscribe(params => {
-      this.origen = params.get('origen');
-    });
+  ngOnInit() {
   }
   
 

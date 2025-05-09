@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-anadir-orador',
@@ -10,14 +10,14 @@ import { Router } from '@angular/router';
 export class AnadirOradorPage implements OnInit {
   rutValue: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private location: Location) { }
 
   onAgregar() {
     console.log('RUT agregado:', this.rutValue);
   }
 
-  onVolver() {
-    this.router.navigate(['/charla-especifica']); // Ajusta la ruta si es necesario
+  volver(): void {
+    this.location.back();
   }
 
   ngOnInit() {
