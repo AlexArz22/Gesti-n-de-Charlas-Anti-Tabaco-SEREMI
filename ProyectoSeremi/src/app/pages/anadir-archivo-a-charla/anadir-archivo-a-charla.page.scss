@@ -1,16 +1,14 @@
-ion-content.contenedor {
-  --padding-top: 5rem;
-  --padding-left: 2rem;
-  --padding-right: 2rem;
-  --padding-bottom: 2rem;
-  text-align: center;
+.contenedor {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  padding: 5rem 2rem 2rem 2rem;
+  text-align: center;
 
   .scrollable {
     flex-grow: 1;
     overflow-y: auto;
-    max-height: 60vh;
+    max-height: 100%; 
     padding-right: 0.5rem;
   }
 

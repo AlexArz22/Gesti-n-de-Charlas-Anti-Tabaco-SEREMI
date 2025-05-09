@@ -79,7 +79,7 @@ const routes: Routes = [
   },
   {
     path: 'anadir-archivo-a-charla',
-    loadChildren: () => import('./pages/anadir-actividad-a-charla/anadir-actividad-a-charla.module').then( m => m.AnadirActividadACharlaPageModule)
+    loadChildren: () => import('./pages/anadir-archivo-a-charla/anadir-archivo-a-charla.module').then( m => m.AnadirArchivoACharlaPageModule)
   },
   {
     path: 'registrar-charla-nueva',

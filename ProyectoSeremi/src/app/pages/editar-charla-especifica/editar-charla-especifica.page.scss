@@ -1,6 +1,5 @@
-// ----------------- Base -----------------
 ion-content.principal-content {
-  top: 7%;
+  top: 5%;
   display: block;
   height: 100%;
   --overflow: auto;
@@ -8,26 +7,29 @@ ion-content.principal-content {
   color: #2f3542;
 }
 
-// contenedor de 3 columnas
 .charla-container {
   display: flex;
   height: 100%;
   width: 100%;
-  position: relative;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
+  color: #000000;
+  overflow-y: auto;
+  position: relative;
 }
 
-// ---- Sidebar Izquierdo ----
 .charla-sidebar-left {
   width: 22%;
-  background-color: rgba(210, 210, 210, 0.49);
+  background-color: #d2d2d27c;
   padding: 1.5rem;
   font-size: 1.4rem;
   border-right: 1px solid #ddd;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-shrink: 0;
+  padding: 1.5rem 1.5rem 3rem; 
+  justify-content: space-between;
 
   .titulo-editor {
     font-weight: bold;
@@ -45,7 +47,6 @@ ion-content.principal-content {
   }
 }
 
-// ---- Área Principal ----
 .charla-main {
   width: 56%;
   padding: 2rem;
@@ -55,7 +56,6 @@ ion-content.principal-content {
   gap: 1.5rem;
 }
 
-// Los grupos de inputs van dentro de “info-box”
 .charla-main .charla-info {
   display: flex;
   flex-direction: column;
@@ -85,7 +85,6 @@ ion-content.principal-content {
   }
 }
 
-// Temario
 .charla-main .temario {
   .temario-titulo {
     background-color: #99a9ff;
@@ -106,7 +105,6 @@ ion-content.principal-content {
   }
 }
 
-// ---- Sidebar Derecho ----
 .charla-sidebar-right {
   width: 22%;
   padding: 2rem;
@@ -117,13 +115,15 @@ ion-content.principal-content {
   flex-shrink: 0;
 
   .btn {
-    --background: #7b7de0;
-    --color: #fff;
-    --border-radius: 8px;
-    font-weight: bold;
-    font-size: 100%;
-    text-align: center;
-    text-transform: none;
+  background: #7b7de0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 100%;
+  text-align: center;
+  transition: background-color 0.2s ease, filter 0.2s ease;
+  width: 100%;
   }
 
   .btn:disabled {
@@ -162,9 +162,16 @@ ion-content.principal-content {
 }
 
 @media (max-width: 480px) {
+  .charla-sidebar-left .titulo-editor {
+    font-size: 1.6rem; 
+    text-align: center;
+  }
+
   .charla-sidebar-left h3,
   .charla-sidebar-left .titulo-editor {
-    font-size: 1rem;
+    width: 100%;
+    padding: 1rem;
+    flex: none;
   }
 
   .charla-main .charla-info {

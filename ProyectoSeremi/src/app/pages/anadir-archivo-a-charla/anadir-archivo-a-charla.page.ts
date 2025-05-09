@@ -16,7 +16,7 @@ export class AnadirArchivoACharlaPage implements OnInit {
   constructor(private location: Location) {}
 
   archivosDisponibles: Archivo[] = [
-    { nombre: 'Efectos_del_cigarro_en_pulmones.pdf' }
+    { nombre: 'Efectos_del_cigarro_en_pulmones.pdf' },                       
   ];
 
   archivosSeleccionados: Archivo[] = [];
