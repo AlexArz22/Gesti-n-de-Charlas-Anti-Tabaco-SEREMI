@@ -23,4 +23,8 @@ export class CharlasPage implements OnInit {
   goToMenu() {
     this.router.navigate(['/principal']);
   }
+
+  goToCrearCharla(){
+    this.router.navigate(['/registrar-charla-nueva']);
+  }
 }
