@@ -73,6 +73,10 @@ const routes: Routes = [
   {
     path: 'anadir-archivo-a-charla',
     loadChildren: () => import('./pages/anadir-archivo-a-charla/anadir-archivo-a-charla.module').then( m => m.AnadirArchivoACharlaPageModule)
+  },
+  {
+    path: 'registrar-charla-nueva',
+    loadChildren: () => import('./pages/registrar-charla-nueva/registrar-charla-nueva.module').then( m => m.RegistrarCharlaNuevaPageModule)
   }
 
 

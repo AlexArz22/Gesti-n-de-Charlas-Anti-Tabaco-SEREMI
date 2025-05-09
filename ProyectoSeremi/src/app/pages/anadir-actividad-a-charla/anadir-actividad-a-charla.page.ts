@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
 
 interface Actividad {
   nombre: string;
@@ -13,7 +13,7 @@ interface Actividad {
 })
 export class AnadirActividadACharlaPage implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private location: Location) {}
 
   actividadesDisponibles: Actividad[] = [
     { nombre: 'Actividad Fumar te da Cancer' },
@@ -34,8 +34,8 @@ export class AnadirActividadACharlaPage implements OnInit {
     this.actividadesSeleccionadas = this.actividadesSeleccionadas.filter(a => a !== actividad);
   }
 
-  goToCharlaEspecifica(): void {
-    this.router.navigate(['/editar-charla-especifica']);
+  volver(): void {
+    this.location.back();
   }
 
   ngOnInit(): void {}

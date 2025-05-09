@@ -1,0 +1,42 @@
+<ion-content class="principal-content">
+  <div class="charla-container">
+
+    <aside class="charla-sidebar-left">
+      <div class="titulo-editor">Registrar Charla</div>
+      <ion-button class="btn-volver" (click)="volver()">Volver a Charlas</ion-button>
+    </aside>
+
+    <main class="charla-main">
+      <div class="charla-info">
+        <div class="info-box">
+          <ion-input placeholder="*Ingrese fecha del evento" [(ngModel)]="fechaCharla"></ion-input>
+          <ion-input placeholder="*Ingrese establecimiento" [(ngModel)]="colegio"></ion-input>
+          <ion-input placeholder="*Ingrese la región" [(ngModel)]="region"></ion-input>
+          <ion-input placeholder="*Ingrese la comuna" [(ngModel)]="comuna"></ion-input>
+          <ion-input placeholder="*Ingrese curso" [(ngModel)]="curso"></ion-input>
+        </div>
+        <div class="info-box">
+          <ion-input placeholder="Asistencia:" disabled></ion-input>
+          <ion-input placeholder="Hombres:" disabled></ion-input>
+          <ion-input placeholder="Mujeres:" disabled></ion-input>
+        </div>
+      </div>
+
+      <div class="temario">
+        <div class="temario-titulo">Temario:</div>
+        <div class="temario-contenido">
+          <ion-textarea placeholder="*" [(ngModel)]="temario"></ion-textarea>
+        </div>
+      </div>
+    </main>
+
+    <!-- SIDEBAR DERECHO: botones de acción -->
+    <aside class="charla-sidebar-right">
+      <ion-button class="btn" (click)="guardarCambios()">Crear Charla</ion-button>
+      <ion-button class="btn" (click)="agregarActividades()">Añadir Actividades</ion-button>
+      <ion-button class="btn" (click)="agregarContenido()">Añadir Contenido</ion-button>
+      <ion-button class="btn" (click)="asignarOradores()">Asignar Oradores</ion-button>
+    </aside>
+
+  </div>
+</ion-content>
