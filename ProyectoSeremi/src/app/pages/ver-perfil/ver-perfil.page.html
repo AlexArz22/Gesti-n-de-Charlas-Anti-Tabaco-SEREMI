@@ -1,0 +1,67 @@
+<ion-content class="perfil-background">
+  <div class="perfil-container">
+    <div class="perfil-header">
+      <ion-icon name="person-circle-outline" class="perfil-icon"></ion-icon>
+      <h1>Nombre Apellido</h1>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <div class="campo">
+            <label class="campo-label">RUT</label>
+            <p class="campo-valor">12.345.678-9</p>
+          </div>
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="campo">
+            <label class="campo-label">Región</label>
+            <p class="campo-valor">Región Metropolitana</p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <div class="campo">
+            <label class="campo-label">Comuna</label>
+            <p class="campo-valor">Santiago</p>
+          </div>
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="campo">
+            <label class="campo-label">Dirección</label>
+            <p class="campo-valor">Av. Siempre Viva 123</p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="6">
+          <div class="campo">
+            <label class="campo-label">Correo electrónico</label>
+            <p class="campo-valor">correoejemplo.com</p>
+          </div>
+        </ion-col>
+
+        <ion-col size="6">
+          <div class="campo">
+            <label class="campo-label">Contraseña</label>
+            <p class="campo-valor">********</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button class="boton-editar" (click)="irAEditarPerfil()">
+      Editar Perfil
+    </ion-button>
+  </div>
+
+  <!-- Botón volver -->
+  <ion-button class="boton-volver" (click)="irAMenu()">
+    Volver a Menú
+  </ion-button>
+</ion-content>
