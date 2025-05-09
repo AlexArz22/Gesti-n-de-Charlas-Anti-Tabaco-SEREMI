@@ -6,6 +6,12 @@
   padding: 4vh 20vw;
   flex-wrap: wrap;
   background-color: #fff;
+
+  @media (max-width: 768px) {
+    padding: 4vh 5vw;
+    flex-direction: column;
+    align-items: center; 
+  }
 }
 
 .registro-titulo {
@@ -15,11 +21,23 @@
   align-items: flex-start;
   color: #000;
   padding-right: 2vw;
+
+  @media (max-width: 768px) {
+    padding-right: 0; 
+    justify-content: center; 
+  }
 }
 
 .registro-titulo h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 4rem; 
+  font-weight: 700;  
+  font-family: 'Times New Roman'; 
+  color: #000; 
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    text-align: center; 
+  }
 }
 
 .registro-formulario {
@@ -29,6 +47,11 @@
   font-size: 0.8rem;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    max-width: 100%; 
+    padding: 0 2rem; 
+  }
 }
 
 .registro-label {
@@ -38,7 +61,7 @@
   color: #000;
   margin-bottom: 2px;
   margin-top: 8px;
-  align-self: flex-start; 
+  align-self: flex-start;
 }
 
 .campo {
@@ -81,7 +104,7 @@ ion-input::part(native) {
 
   ion-button {
     --background: transparent;
-    --color: #007bff; // color típico de link
+    --color: #007bff; 
     --box-shadow: none;
     padding: 0;
     font-size: 0.7rem;

@@ -2,30 +2,36 @@
   <h2>Registro de asistencia</h2>
 
   <form #asistenciaForm="ngForm">
-    <input
+    <ion-input
       type="number"
       name="asistentes"
       placeholder="Asistentes"
-
       required
-    />
-    <input
+      fill="outline"
+    ></ion-input>
+
+    <ion-input
       type="number"
       name="hombres"
       placeholder="Hombres"
-
       required
-    />
-    <input
+      fill="outline"
+    ></ion-input>
+
+    <ion-input
       type="number"
       name="mujeres"
       placeholder="Mujeres"
-
       required
-    />
+      fill="outline"
+    ></ion-input>
 
-    <button type="submit" class="btn-guardar">Guardar Asistencia</button>
+    <ion-button expand="block" class="btn-guardar" (click)="goToCharlaEspecifica()" type="submit">
+      Guardar Asistencia
+    </ion-button>
   </form>
 
-  <button class="btn-volver"(click)="goToCharlaEspecifica()">Volver a charla</button>
+  <ion-button expand="block" fill="solid" class="btn-volver" (click)="goToCharlaEspecifica()">
+    Volver a charla
+  </ion-button>
 </div>

@@ -11,16 +11,17 @@ export class SeleccionarActividadPage implements OnInit {
 
   constructor(private router: Router) {}
   actividades = [
-    { nombre: 'Actividad_1_juego_salud.pdf' },
-    { nombre: 'Actividad_2_quiz_tabaco.pdf' },
-    { nombre: 'Actividad_3_trivia_vapeo.pdf' }
+    { nombre: 'Actividad Fumar te da Cancer' },
+    { nombre: 'Actividad El Vaper y sus efectos a largo plazo' },
+    { nombre: 'Actividad Tabaco y sus consecuencias' },
+    { nombre: 'Actividad Componentes del cigarro' }
   ];
   goToCharlaEspecifica(){
     this.router.navigate(['/charla-especifica']);
   }
 
-  seleccionar(nombre: string): void {
-    console.log('Actividad seleccionada:', nombre);
+  goToActividad() {
+    this.router.navigate(['/actividad-especifica']);
   }
   ngOnInit() {
   }
