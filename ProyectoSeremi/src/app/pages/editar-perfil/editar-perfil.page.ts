@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-perfil',
@@ -8,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarPerfilPage implements OnInit {
 
-  constructor() { }
+  completado: boolean = true;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  apretarCompletar() {
+    this.completado = false;
+  }
+
+  irAPerfil() {
+    this.router.navigate(['/ver-perfil']);
   }
 
 }
