@@ -37,9 +37,9 @@ h1 {
   text-transform: none;
 }
 
-// Botones inferiores
-.volver-btn,
-.crear-actividad-btn {
+
+
+.volver-btn {
   position: fixed;
   bottom: 20px;
   z-index: 10;
@@ -49,23 +49,31 @@ h1 {
   max-width: 45%;
   width: auto;
   text-transform: none;
-}
-
-.volver-btn {
   left: 10px;
   --background: #2e2b3d;
   --color: white;
 }
 
 .crear-actividad-btn {
+    position: fixed;
+  bottom: 20px;
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  max-width: 45%;
+  width: auto;
+  text-transform: none;
   right: 10px;
   --background: #7879f1;
   --color: white;
   white-space: normal;
   text-align: center;
-  height: 10%;
-
+  height: 5rem;              // Fijo y más cuadrado
+  width: 13rem;   
+  border-radius: 4px;            // Igual al alto para hacerlo cuadrado
 }
+
 
 @media (max-width: 500px) {
   

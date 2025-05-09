@@ -16,7 +16,7 @@ export class HeaderComponent  implements OnInit {
   }
   
   goToPerfil() {
-    this.router.navigate(['/perfil']);
+    this.router.navigate(['/ver-perfil']);
   }
   ngOnInit() {}
 

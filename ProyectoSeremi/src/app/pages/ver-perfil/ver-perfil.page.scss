@@ -1,0 +1,89 @@
+.perfil-background {
+  display: flex;
+  top: 70px;
+}
+
+.perfil-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.perfil-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.perfil-icon {
+  font-size: 60px;
+  color: #000;
+}
+
+ion-grid {
+  width: 100%;
+}
+
+ion-row {
+  display: flex;
+}
+
+ion-col {
+  padding: 0 1rem;
+}
+
+/* Estilos nuevos para campos */
+.campo {
+  margin-bottom: 1rem;
+}
+
+.campo-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #000;
+}
+
+.campo-valor {
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.boton-volver {
+  position: fixed;
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  max-width: 45%;
+  width: auto;
+  text-transform: none;
+  bottom: 1rem;
+  left: 1rem;
+  --background: #2e2b3d;
+  --color: white;
+}
+
+.boton-editar {
+  --background: #7879f1;
+  --color: white;
+  //height: 10%;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  ion-col {
+    width: 100%;
+  }
+
+  ion-row {
+    flex-direction: column;
+  }
+}

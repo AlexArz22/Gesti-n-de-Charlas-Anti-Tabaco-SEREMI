@@ -20,7 +20,6 @@ const routes: Routes = [
       
       { path: 'charla-especifica/:id', loadChildren: () => import('./pages/charla-especifica/charla-especifica.module').then(m => m.CharlaEspecificaPageModule) },
       { path: 'crear-charla', loadChildren: () => import('./pages/crear-charla/crear-charla.module').then(m => m.CrearCharlaPageModule) },
-      { path: 'perfil', loadChildren: () => import('./pages/perfil/perfil.module').then(m => m.PerfilPageModule) },
       {
         path: 'crear-actividad',
         loadChildren: () => import('./pages/crear-actividad/crear-actividad.module').then( m => m.CrearActividadPageModule)
@@ -66,7 +65,16 @@ const routes: Routes = [
   {
     path: 'editar-charla-especifica',
     loadChildren: () => import('./pages/editar-charla-especifica/editar-charla-especifica.module').then( m => m.EditarCharlaEspecificaPageModule)
+  },
+  {
+    path: 'ver-perfil',
+    loadChildren: () => import('./pages/ver-perfil/ver-perfil.module').then( m => m.VerPerfilPageModule)
+  },
+  {
+    path: 'editar-perfil',
+    loadChildren: () => import('./pages/editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
   }
+
 
 
 
