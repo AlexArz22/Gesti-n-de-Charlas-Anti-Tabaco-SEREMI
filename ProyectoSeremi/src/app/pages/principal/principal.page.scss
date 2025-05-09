@@ -1,89 +1,136 @@
 ion-content.principal-content {
-    display: flex;
-    justify-content: center;  
-    align-items: center;    
-    height: 100%;  
-    --overflow: visible;
+  height: 100%;
+  --overflow: hidden;
+  top: 70px; 
+}
+
+/* Layout general: sidebar + área principal */
+.layout {
+  display: flex;
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 0 0 20vw;
+  background: rgba(97, 95, 95, 0.15);
+  padding: 1rem;
+  box-sizing: border-box;
+
+  h3 {
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+    color: #000;
   }
-  
-  .contenedor-botones {
-    position: relative;
+  ion-item {
+    --background: rgba(255,255,255,0.8);
+    --inner-border-width: 0;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+}
+
+/* Contenedor de botones: flex-wrap para hacer “dos arriba y uno abajo” */
+.grid-botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; // MISMO GAP entre filas que entre columnas
+  padding: 4.1rem; //para centrar mejor.
+}
+
+/* Fila de botones superiores */
+.fila-superior {
+  display: flex;
+  gap: 2rem; // MISMO GAP que .grid-botones -> igual distancia
+}
+
+/* Cada tarjeta (botón envuelto) */
+.tarjeta {
+  width: 25vw;
+}
+
+/* Botones visuales */
+.tarjeta ion-button {
+  width: 100%;
+  height: 18vh;
+  font-size: 2vw;
+
+  --background: #005a9c;
+  --color: white;
+  --background-hover: #00457a;
+  --background-activated: #003b6b;
+  --background-focused: #005a9c;
+}
+
+/* Centrado especial para el botón de charlas */
+.charlas {
+  margin-top: 2rem; // asegura misma distancia vertical (opcional si usas gap)
+}
+
+@media only screen and (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
     width: 100%;
-    height: 100%;
-    display: flex;
+    flex: none;
+    order: 1;
+  }
+  .grid-botones {
+    order: 2;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .fila-superior {
+    width: 100%;
     justify-content: center;
+    gap: 1.5rem;
+  }
+  .tarjeta {
+    width: 80vw;
+    max-width: 360px;
+  }
+  .tarjeta ion-button {
+    height: 14vh;
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* El contenedor flex se asegura de centrar todo */
+  .grid-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente si fuera necesario */
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+
+  /* La fila superior también centra sus hijos */
+  .fila-superior {
+    display: flex;
+    flex-direction: column;  /* apilados verticalmente en móvil */
+    align-items: center;     /* centra cada tarjeta */
+    gap: 1rem;
+    width: 100%;
+  }
+
+  /* Las tarjetas se limitan en ancho y se centran */
+  .tarjeta {
+    width: 90vw;
+    max-width: 360px;
+    margin: 0 auto;          /* ¡asegura el centrado! */
+  }
+
+  /* Botones con buen tamaño y centrados */
+  .tarjeta ion-button {
+    width: 100%;             /* ocupa todo el ancho de la tarjeta */
+    height: 60px;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center; /* icono + texto centrados */
     align-items: center;
   }
-  
-  .boton-izquierda {
-    position: absolute;
-    top: 30%;  
-    left: 25%;   
-    height: 20vh; 
-    width: 27vw;  
-    font-size: 2vw; 
-    padding: 2vh 3vw; 
-  }
-  
-  .boton-derecha {
-    position: absolute;
-    top: 30%; 
-    left: 49%;  
-    height: 20vh; 
-    width: 27vw; 
-    font-size: 2vw; 
-    padding: 2vh 3vw; 
-  }
-  
-  .boton-abajo {
-    position: absolute;
-    top: 52%;
-    left: 49%;
-    height: 20vh; 
-    width: 27vw;  
-    font-size: 2vw;
-    padding: 2vh 3vw; 
-  }
-  
-  
-
-
-  .lista-izquierda {
-    position: absolute;
-    top: 56px; 
-    left: 0;
-    width: 20vw;
-    max-height: 40vh;
-    background-color: rgba(128, 128, 128, 0.4); 
-    padding: 1rem;
-    box-sizing: border-box;
-    z-index: 10;
-    border-radius: 0 10px 10px 0;
-    overflow-y: auto;
-  }
-  
-  .lista-izquierda ion-item {
-    --background: rgba(255, 255, 255, 0.767);    
-    color: #000000;            
-    --inner-border-width: 0px;   
-    --border-color: transparent;  
-  }
-  
-  .lista-izquierda ion-list {
-    margin: 0;
-    padding: 0;
-  }
-
-  .floating-button {
-    position: absolute;
-    top: 300px;
-    left: 150px; // o donde quieras posicionarlo
-    z-index: 1000; // más alto que el z-index del sidebar
-    //pointer-events: auto;
-  }
-  
-  .fab-prueba {
-    z-index: 9999 !important;
-    left: 200px;
-    top: 300px;
-  }
+}
