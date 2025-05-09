@@ -33,10 +33,11 @@ ion-content.principal-content {
   flex-direction: column;
   justify-content: space-between;
   flex-shrink: 0;
+  padding: 1.5rem 1.5rem 3rem; 
+  justify-content: space-between;
 }
 
 .btn-volver {
-  margin-top: auto;
   background-color: #2f3542;
   color: #fff;
   border: none;
