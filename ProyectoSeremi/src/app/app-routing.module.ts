@@ -66,7 +66,15 @@ const routes: Routes = [
   {
     path: 'editar-charla-especifica',
     loadChildren: () => import('./pages/editar-charla-especifica/editar-charla-especifica.module').then( m => m.EditarCharlaEspecificaPageModule)
+  },  {
+    path: 'anadir-actividad-a-charla',
+    loadChildren: () => import('./pages/anadir-actividad-a-charla/anadir-actividad-a-charla.module').then( m => m.AnadirActividadACharlaPageModule)
+  },
+  {
+    path: 'anadir-archivo-a-charla',
+    loadChildren: () => import('./pages/anadir-archivo-a-charla/anadir-archivo-a-charla.module').then( m => m.AnadirArchivoACharlaPageModule)
   }
+
 
 
 

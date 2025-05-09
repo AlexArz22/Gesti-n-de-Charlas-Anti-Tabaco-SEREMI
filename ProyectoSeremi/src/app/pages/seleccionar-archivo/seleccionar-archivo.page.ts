@@ -11,7 +11,7 @@ export class SeleccionarArchivoPage implements OnInit {
 
   constructor(private router: Router) {}
   archivos = [
-    { nombre: 'Efectos_del_cigarro_en_pulmonespdf' },
+    { nombre: 'Efectos_del_cigarro_en_pulmones.pdf' },
   ];
   abrirArchivo(): void {
     window.open('/assets/presentaciones/Efectos_del_cigarro_en_pulmones.pdf', '_blank');
