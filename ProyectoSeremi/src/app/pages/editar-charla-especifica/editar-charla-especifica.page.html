@@ -1,33 +1,44 @@
-<ion-content>
-  <div class="editor-charla-container">
+<ion-content class="principal-content">
+  <div class="charla-container">
 
-    <div class="formulario">
-      
-      <div class="titulo-editor">
-        Editor Charla
+    <!-- SIDEBAR IZQUIERDO: sólo título y “Volver” -->
+    <aside class="charla-sidebar-left">
+      <div class="titulo-editor">Editor Charla</div>
+      <ion-button class="btn-volver" (click)="volver()">Volver a Charla</ion-button>
+    </aside>
+
+    <!-- CONTENIDO PRINCIPAL: el formulario -->
+    <main class="charla-main">
+      <div class="charla-info">
+        <div class="info-box">
+          <ion-input placeholder="12 de Mayo, 2025" [(ngModel)]="fechaCharla"></ion-input>
+          <ion-input placeholder="Colegio nuestro fundador del prado" [(ngModel)]="colegio"></ion-input>
+          <ion-input placeholder="Valparaíso" [(ngModel)]="region"></ion-input>
+          <ion-input placeholder="Villa Alemana" [(ngModel)]="comuna"></ion-input>
+          <ion-input placeholder="Sexto Básico" [(ngModel)]="curso"></ion-input>
+        </div>
+        <div class="info-box">
+          <ion-input placeholder="Asistencia:" disabled></ion-input>
+          <ion-input placeholder="Hombres:" disabled></ion-input>
+          <ion-input placeholder="Mujeres:" disabled></ion-input>
+        </div>
       </div>
 
-      <ion-input placeholder="12 de Mayo, 2025" [(ngModel)]="fechaCharla"></ion-input>
-      <ion-input placeholder="Colegio nuestro fundador del prado" [(ngModel)]="colegio"></ion-input>
-      <ion-input placeholder="Valparaíso" [(ngModel)]="region"></ion-input>
-      <ion-input placeholder="Villa Alemana" [(ngModel)]="comuna"></ion-input>
-      <ion-input placeholder="Sexto Básico" [(ngModel)]="curso"></ion-input>
-  
-      <ion-input placeholder="Asistencia:" disabled></ion-input>
-      <ion-input placeholder="Hombres:" disabled></ion-input>
-      <ion-input placeholder="Mujeres:" disabled></ion-input>
-  
-      <div class="temario-label">Temario:</div>
-      <ion-textarea placeholder="Efectos del tabaco en la salud" [(ngModel)]="temario"></ion-textarea>
-    </div>
-  
-    <div class="Botones">
-      <ion-button class="action-button reducido" (click)="guardarCambios()">Guardar Cambios</ion-button>
-      <ion-button class="action-button reducido" (click)="agregarActividades()">Añadir Actividades</ion-button>
-      <ion-button class="action-button reducido" (click)="agregarContenido()">Añadir Contenido</ion-button>
-      <ion-button class="action-button reducido" (click)="asignarOradores()">Asignar Oradores</ion-button>
-    </div>
+      <div class="temario">
+        <div class="temario-titulo">Temario:</div>
+        <div class="temario-contenido">
+          <ion-textarea placeholder="Efectos del tabaco en la salud" [(ngModel)]="temario"></ion-textarea>
+        </div>
+      </div>
+    </main>
 
-    <ion-button class="btn-volver" (click)="volver()">Volver a Charla</ion-button>
+    <!-- SIDEBAR DERECHO: botones de acción -->
+    <aside class="charla-sidebar-right">
+      <ion-button class="btn" (click)="guardarCambios()">Guardar Cambios</ion-button>
+      <ion-button class="btn" (click)="agregarActividades()">Añadir Actividades</ion-button>
+      <ion-button class="btn" (click)="agregarContenido()">Añadir Contenido</ion-button>
+      <ion-button class="btn" (click)="asignarOradores()">Asignar Oradores</ion-button>
+    </aside>
+
   </div>
 </ion-content>

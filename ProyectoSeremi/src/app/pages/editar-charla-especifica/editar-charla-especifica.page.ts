@@ -22,11 +22,11 @@ export class EditarCharlaEspecificaPage implements OnInit {
   }
 
   agregarActividades() {
-    // meter esta funcion cuando exista back end 
+    // meter esta funcion 
   }
 
   agregarContenido() {
-    // meter esta funcion cuando exista back end 
+    // meter esta funcion 
   }
 
   asignarOradores() {

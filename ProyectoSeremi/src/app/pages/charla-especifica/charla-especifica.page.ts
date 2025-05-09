@@ -32,6 +32,9 @@ export class CharlaEspecificaPage implements OnInit {
   goToRegistrarAsistentes(){
     this.router.navigate(['/registrar-asistentes']);
   }
+  goToEditarCharla(){
+    this.router.navigate(['/editar-charla-especifica']);
+  }
 
   toggleContador() {
     if (!this.botonIniciado) {

@@ -1,19 +1,74 @@
-.editor-charla-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0 0.5vw 0 25vw; 
-    padding-top: 70px; 
-    min-height: calc(100vh - 70px);
+// ----------------- Base -----------------
+ion-content.principal-content {
+  top: 7%;
+  display: block;
+  height: 100%;
+  --overflow: auto;
+  background-color: #f4f6fa;
+  color: #2f3542;
+}
+
+// contenedor de 3 columnas
+.charla-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-color: #ffffff;
+}
+
+// ---- Sidebar Izquierdo ----
+.charla-sidebar-left {
+  width: 22%;
+  background-color: rgba(210, 210, 210, 0.49);
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-shrink: 0;
+
+  .titulo-editor {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #000;
   }
-  
-  .formulario {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    border-radius: 16px;
-  
+
+  .btn-volver {
+    margin-top: auto;
+    --background: #2f3542;
+    --color: #fff;
+    --border-radius: 6px;
+    text-transform: none;
+  }
+}
+
+// ---- Área Principal ----
+.charla-main {
+  width: 56%;
+  padding: 2rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+// Los grupos de inputs van dentro de “info-box”
+.charla-main .charla-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .info-box {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
     ion-input,
     ion-textarea {
       border: 1.5px solid #5c33f6;
@@ -21,72 +76,120 @@
       padding: 0.6rem;
       color: #000;
     }
-  
+
     ion-input[disabled] {
       --background: #d9d9d9;
       color: #555;
     }
-  
-    .temario-label {
-      background-color: #a3a3ff;
-      color:#000;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      border-radius: 4px 4px 0 0;
-      margin-top: 1rem;
-    }
-  
+  }
+}
+
+// Temario
+.charla-main .temario {
+  .temario-titulo {
+    background-color: #99a9ff;
+    color: #fff;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  .temario-contenido {
+    margin-top: 0.5rem;
     ion-textarea {
       min-height: 80px;
+      border: 1.5px solid #5c33f6;
+      border-radius: 0.5vw;
+      padding: 0.6rem;
+      color: #000;
+    }
+  }
+}
+
+// ---- Sidebar Derecho ----
+.charla-sidebar-right {
+  width: 22%;
+  padding: 2rem;
+  background-color: rgba(210, 210, 210, 0.49);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+
+  .btn {
+    --background: #7b7de0;
+    --color: #fff;
+    --border-radius: 8px;
+    font-weight: bold;
+    font-size: 100%;
+    text-align: center;
+    text-transform: none;
+  }
+
+  .btn:disabled {
+    --background: #c3c8e6;
+    cursor: not-allowed;
+  }
+}
+
+// ----------------- Responsive -----------------
+@media (max-width: 768px) {
+  .charla-container {
+    flex-direction: column;
+    padding: 0.5rem;
+    height: auto;
+  }
+
+  .charla-sidebar-left,
+  .charla-main,
+  .charla-sidebar-right {
+    width: 100%;
+    padding: 1rem;
+    flex: none;
+    order: 0;
+  }
+
+  .charla-sidebar-left {
+    border-right: none;
+    order: 1;
+  }
+  .charla-main {
+    order: 2;
+  }
+  .charla-sidebar-right {
+    order: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .charla-sidebar-left h3,
+  .charla-sidebar-left .titulo-editor {
+    font-size: 1rem;
+  }
+
+  .charla-main .charla-info {
+    .info-box {
+      grid-template-columns: 1fr;
     }
   }
 
-  .titulo-editor {
-    position: absolute;
-    top: 80px;
-    left: 1vw;
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 1rem;
+  .charla-sidebar-right {
+    gap: 1rem;     
+    padding: 1rem;
+    padding-bottom: 4rem;
   }
-  
-  .Botones {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-left: 2rem;
-    align-items: stretch;
-    justify-content: flex-start;
-  
-    .action-button {
-      --background: #5c33f6;
-      --color: white;
-      --border-radius: 10px;
-      height: 70px;
-      font-weight: bold;
-      text-transform: none;
-      max-width: 12vw; 
-    }
+  .charla-sidebar-right .btn {
+    padding: 0.75rem;
+    font-size: 0.9rem; 
   }
-  
+
+  .charla-sidebar-left ion-input,
+  .charla-main ion-input,
+  .charla-main ion-textarea {
+    font-size: 0.9rem;
+  }
+
   .btn-volver {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-  
-    --background: #1c1c3e;
-    --color: #ffffff;
-    --border-radius: 999px;
-    --padding-start: 1.5rem;
-    --padding-end: 1.5rem;
-    --padding-top: 0.5rem;
-    --padding-bottom: 0.5rem;
-  
-    font-weight: 500; text-transform: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
-    --background-hover: #2a2a5a;
-    --background-activated: #14142b;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
+}
