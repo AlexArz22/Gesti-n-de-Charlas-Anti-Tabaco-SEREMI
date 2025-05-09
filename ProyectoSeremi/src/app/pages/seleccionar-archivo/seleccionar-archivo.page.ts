@@ -10,7 +10,9 @@ import { Router } from '@angular/router';
 export class SeleccionarArchivoPage implements OnInit {
 
   constructor(private router: Router) {}
-
+  archivos = [
+    { nombre: 'Efectos_del_cigarro_en_pulmonespdf' },
+  ];
   abrirArchivo(): void {
     window.open('/assets/presentaciones/Efectos_del_cigarro_en_pulmones.pdf', '_blank');
   }

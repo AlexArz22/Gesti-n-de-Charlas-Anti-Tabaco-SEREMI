@@ -2,12 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
-// app-routing.module.ts
 const routes: Routes = [
-  // Rutas SIN layout (como inicio-sesion)
-  
 
-  // Rutas CON layout (sidebars + header condicional)
   {
     path: '',
     component: AppComponent,

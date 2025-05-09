@@ -1,52 +1,52 @@
 <ion-content class="principal-content">
-<div class="charla-container">
-  <aside class="charla-sidebar-left">
-    <p class="charla-fecha"><strong>12/5 - Charla con Colegio nuestro fundador del prado</strong></p>
-    <button class="btn btn-volver" (click)="goToCharlas()">Volver a charlas</button>
-  </aside>
-  
+  <div class="charla-container">
+    
+    <aside class="charla-sidebar-left">
+      <p class="charla-fecha"><strong>12/5 - Charla con Colegio nuestro fundador del prado</strong></p>
+      <ion-button class="btn-volver" color="#2f3542" expand="block" (click)="goToCharlas()">Volver a charlas</ion-button>
+    </aside>
 
-  <main class="charla-main">
-    <div class="charla-info">
-      <div class="info-box"><strong>Establecimiento:</strong> Colegio nuestro fundador del prado</div>
-      <div class="info-box"><strong>Región:</strong> Valparaíso</div>
-      <div class="info-box"><strong>Comuna:</strong> Villa alemana</div>
-      <div class="info-box"><strong>Curso:</strong> Sexto Básico</div>
-      <div class="info-box"><strong>Asistencia:</strong></div>
-      <div class="info-box"><strong>Hombres:</strong></div>
-      <div class="info-box"><strong>Mujeres:</strong></div>
+    <main class="charla-main">
+      <div class="charla-info">
+        <div class="info-box"><strong>Establecimiento:</strong> Colegio nuestro fundador del prado</div>
+        <div class="info-box"><strong>Región:</strong> Valparaíso</div>
+        <div class="info-box"><strong>Comuna:</strong> Villa alemana</div>
+        <div class="info-box"><strong>Curso:</strong> Sexto Básico</div>
+        <div class="info-box"><strong>Asistencia:</strong></div>
+        <div class="info-box"><strong>Hombres:</strong></div>
+        <div class="info-box"><strong>Mujeres:</strong></div>
 
-      <div class="temario">
-        <div class="temario-titulo">
-          <p><strong> Temario:</strong></p>
-        </div>
-        <div class="temario-contenido">
-          <ul>
-            <li>Introducción: El cigarro</li>
-            <li>¿Por qué fumar no te hace bien?</li>
-            <li>El vaper</li>
-            <li>El vapor del vaper</li>
-            <li>Estructura del cigarro</li>
-          </ul>
+        <div class="temario">
+          <div class="temario-titulo">
+            <p><strong>Temario:</strong></p>
+          </div>
+          <div class="temario-contenido">
+            <ul>
+              <li>Introducción: El cigarro</li>
+              <li>¿Por qué fumar no te hace bien?</li>
+              <li>El vaper</li>
+              <li>El vapor del vaper</li>
+              <li>Estructura del cigarro</li>
+            </ul>
+          </div>
         </div>
       </div>
-      
-    </div>
-  </main>
+    </main>
 
-  <aside class="charla-sidebar-right">
-    <button
-      class="btn"
-      [disabled]="botonDeshabilitado"
-      (click)="toggleContador()">
-      {{ botonIniciado ? 'Tiempo: (' + tiempoTranscurrido + ')' : 'Iniciar contador' }}
-    </button>
-  
-    <button class="btn" (click)="goToSeleccionarActividad()">Actividades</button>
-    <button class="btn" (click)="goToSeleccionarArchivo()">Presentaciones</button>
-    <button class="btn" (click)="goToRegistrarAsistentes()">Registrar Asistencia</button>
-    <button class="btn">Editar Charla</button>
-  </aside>
-  
-</div>
+    <aside class="charla-sidebar-right">
+      <ion-button class="btn"
+        color="#7b7de0"
+        expand="block"
+        [disabled]="botonDeshabilitado"
+        (click)="toggleContador()">
+        {{ botonIniciado ? 'Tiempo: (' + tiempoTranscurrido + ')' : 'Iniciar contador' }}
+      </ion-button>
+
+      <ion-button class="btn" color="#7b7de0"  expand="block" (click)="goToSeleccionarActividad()">Actividades</ion-button>
+      <ion-button class="btn" color="#7b7de0" expand="block" (click)="goToSeleccionarArchivo()">Presentaciones</ion-button>
+      <ion-button class="btn" color="#7b7de0" expand="block" (click)="goToRegistrarAsistentes()">Registrar Asistencia</ion-button>
+      <ion-button class="btn" color="#7b7de0" expand="block">Editar Charla</ion-button>
+    </aside>
+
+  </div>
 </ion-content>

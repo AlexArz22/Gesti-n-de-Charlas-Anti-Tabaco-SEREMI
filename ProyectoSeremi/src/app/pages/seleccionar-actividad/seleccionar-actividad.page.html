@@ -4,14 +4,18 @@
   <div class="lista">
     <div class="item" *ngFor="let actividad of actividades">
       <div class="nombre">
-        <i class="fas fa-file-alt"></i>
+        <ion-icon name="document-text-outline"></ion-icon>
         {{ actividad.nombre }}
       </div>
-      <button class="boton" (click)="seleccionar(actividad.nombre)">
-        <i class="fas fa-play"></i>
-      </button>
+      <ion-button fill="clear" shape="round" size="small" (click)="goToActividad()">
+        <ion-icon name="caret-forward-circle" slot="icon-only"></ion-icon>
+      </ion-button>
+      
     </div>
   </div>
 
-  <button class="volver"(click)="goToCharlaEspecifica()">Volver a charla</button>
+  <ion-button expand="block" class="volver" (click)="goToCharlaEspecifica()">
+    Volver a charla
+  </ion-button>
+  
 </div>
