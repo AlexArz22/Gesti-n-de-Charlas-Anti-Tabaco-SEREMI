@@ -13,9 +13,9 @@ export class SeleccionarArchivoPage implements OnInit {
   archivos = [
     { nombre: 'Efectos_del_cigarro_en_pulmones.pdf' },
   ];
-  abrirArchivo(): void {
-    window.open('/assets/presentaciones/Efectos_del_cigarro_en_pulmones.pdf', '_blank');
+  abrirArchivo(): void {    
   }
+
   goToCharlaEspecifica(){
     this.router.navigate(['/charla-especifica']);
   }

@@ -1,56 +1,54 @@
 .diseño-general {
-    //padding-top: 56px; /* Espacio suficiente para el header */
-    top:90px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start; /* Asegura que los elementos se alineen arriba */
-    align-items: flex-start; /* Para que el contenido no se desplace */
-  }
+  top:90px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;
+}
   
-  .input-actividad {
-    //padding-top: 56px;
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    color: #333;
-    background-color: #f9f9f9;
-  }
+.input-actividad {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+}
   
-  .input-actividad::placeholder {
-    color: #888; /* gris claro para el texto del placeholder */
-  }
+.input-actividad::placeholder {
+  color: #888; 
+}
   
-  .crear-btn {
-    display: block;
-    margin: 2rem auto 0 auto;
-    background-color: #7879f1;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
+.crear-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  background-color: #7879f1;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
   
-  .crear-btn:hover {
-    background-color: #5f60d3;
-  }
+.crear-btn:hover {
+  background-color: #5f60d3;
+}
   
-  .volver-btn {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #2e2b3d;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 20px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    z-index: 10;
-  }
+.volver-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #2e2b3d;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  z-index: 10;
+}
   

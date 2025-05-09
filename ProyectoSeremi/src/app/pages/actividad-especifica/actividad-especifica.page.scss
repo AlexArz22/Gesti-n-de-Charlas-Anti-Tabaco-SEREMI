@@ -3,47 +3,47 @@
 }
 
 .actividad-container {
-    position: relative;
-    padding: 2rem 1rem;
-    max-width: 900px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .actividad-box {
-    color: black;
-    background-color: rgb(255, 255, 255);
-    border: 1px solid #7879f1;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .botones-superiores {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-  }
-  
-  .boton-accion {
-    background-color: #7879f1;
-    color: white;
-    border: none;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .boton-accion:hover {
-    background-color: #5f60d3;
-  }
+  position: relative;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.actividad-box {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #7879f1;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botones-superiores {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.boton-accion {
+  background-color: #7879f1;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.boton-accion:hover {
+  background-color: #5f60d3;
+}
   
   .volver-btn,
 .eliminar-btn {
@@ -91,16 +91,16 @@
   .exitosa {
     width: 90%;
     max-width: 400px;
-    margin: 2rem auto;            /* centrar */
+    margin: 2rem auto;  
     padding: 1.5rem;
-    background-color: #ffffff;    /* fondo verde claro */
-    border: 2px solid #51548e;    /* borde verde */
+    background-color: #ffffff;   
+    border: 2px solid #51548e;  
     border-radius: 8px;
     text-align: center;
   
     p {
       margin: 0;
       font-size: 1.1rem;
-      color: #000000;             /* texto verde oscuro */
+      color: #000000;           
     }
   }

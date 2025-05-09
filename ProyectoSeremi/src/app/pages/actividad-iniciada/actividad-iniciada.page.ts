@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
   standalone: false
 })
 export class ActividadIniciadaPage implements OnInit {
+  
+  //Simulación de pregunta
   pregunta: string = '1.- ¿Cuál es un síntoma de fumar mucho tabaco?';
 
   alternativas = [

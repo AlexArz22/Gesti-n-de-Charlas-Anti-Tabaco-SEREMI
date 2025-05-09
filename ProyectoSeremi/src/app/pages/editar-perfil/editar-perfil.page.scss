@@ -77,21 +77,21 @@ ion-select {
 }
 
 .exitosa {
-    width: 90%;
-    max-width: 400px;
-    margin: 2rem auto;            /* centrar */
-    padding: 1.5rem;
-    background-color: #ffffff;    /* fondo verde claro */
-    border: 2px solid #51548e;    /* borde verde */
-    border-radius: 8px;
-    text-align: center;
-  
-    p {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #000000;             /* texto verde oscuro */
-    }
+  width: 90%;
+  max-width: 400px;
+  margin: 2rem auto;            
+  padding: 1.5rem;
+  background-color: #ffffff;  
+  border: 2px solid #51548e;  
+  border-radius: 8px;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #000000;          
   }
+}
 
 @media (max-width: 600px) {
   .editar-perfil-container {

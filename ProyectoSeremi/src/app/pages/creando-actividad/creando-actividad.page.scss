@@ -1,137 +1,131 @@
 .contenido-creacion {
-    padding: 1rem;
-    top: 85px; // espacio para el header
-    display: flex;
-    flex-direction: column;
-    align-items: center;      /* ← centra horizontalmente todo su contenido */
-    padding: 1rem;
-  }
+  padding: 1rem;
+  top: 70px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  padding: 1rem;
+}
   
-  /* título arriba‑izquierda dentro del contenido */
 .titulo-creacion {
-    align-self: flex-start; /* lo lleva al borde izquierdo */
-    margin: 0 0 1rem 1rem;
-    font-size: 1.5rem;
-    color: #333;
-    //top: 3%;
-  }
+  align-self: flex-start; 
+  margin: 0 0 1rem 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
 
-  // Pregunta
-  .pregunta-container {
-    margin-bottom: 2rem;
-    display: flex;
-    justify-content: center;
-    //padding: 20px;
-  }
+.pregunta-container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  //padding: 20px;
+}
   
-  .input-pregunta {
-    //top: 75px;
-    width: 50%;
-    padding: 2.3vw;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    color: #333;
-  
-    @media (max-width: 768px) {
-      width: 90%;
-      padding: 1rem;
-    }
-  }
-  
-  // Alternativas (dentro de ion-grid)
-  .alternativa-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    width: 100%; // ocupa todo el col
-  }
+.input-pregunta {
+  width: 50%;
+  padding: 2.3vw;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
 
-  .mi-grid-centro {
-    width: 100%;
-    max-width: 700px;       /* o el ancho que quieras para tus alternativas */
-    margin: 0 auto;         /* centra el grid dentro de su contenedor */
-  }
-  
-  .input-alternativa {
-    flex-grow: 1;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 2.2vw;
-  }
-  
-  .selector-correcta {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #7879f1;
-    border-radius: 4px;
-    cursor: pointer;
-  
-    &.activa {
-      background-color: #7879f1;
-    }
-  }
-
-  // Texto de ayuda
-  .texto-ayuda {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 0.95rem;
-    color: #666;
-    font-style: italic;
-  }
-
-  .justificar-centro{
-    justify-content: center;
-  }
-  
-
-  .volver-actividades {
-    position: fixed;
-    bottom: 1rem;
-    left: 1rem;
-    background-color: #2e2b3d;
-    color: #fff;
-    border: none;
-    padding: 0.75rem 1.25rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    z-index: 100;
-  }
-
-
-  .crear-btn {
-    display: block;
-    margin: 2rem auto 0 auto;
-    background-color: #7879f1;
-    color: white;
-    border: none;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-
-
-  .exitosa {
+  @media (max-width: 768px) {
     width: 90%;
-    max-width: 400px;
-    margin: 2rem auto;            /* centrar */
-    padding: 1.5rem;
-    background-color: #ffffff;    /* fondo verde claro */
-    border: 2px solid #51548e;    /* borde verde */
-    border-radius: 8px;
-    text-align: center;
-  
-    p {
-      margin: 0;
-      font-size: 1.1rem;
-      color: #000000;             /* texto verde oscuro */
-    }
+    padding: 1rem;
   }
+}
+  
+.alternativa-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%; 
+}
+
+.mi-grid-centro {
+  width: 100%;
+  max-width: 700px;       
+  margin: 0 auto;      
+}
+  
+.input-alternativa {
+  flex-grow: 1;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 2.2vw;
+}
+  
+.selector-correcta {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #7879f1;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &.activa {
+    background-color: #7879f1;
+  }
+}
+
+.texto-ayuda {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+}
+
+.justificar-centro{
+  justify-content: center;
+}
+  
+
+.volver-actividades {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #2e2b3d;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 100;
+}
+
+
+.crear-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  background-color: #7879f1;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+.exitosa {
+  width: 90%;
+  max-width: 400px;
+  margin: 2rem auto;            
+  padding: 1.5rem;
+  background-color: #ffffff;   
+  border: 2px solid #51548e;   
+  border-radius: 8px;
+  text-align: center;
+
+  p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #000000;            
+  }
+}

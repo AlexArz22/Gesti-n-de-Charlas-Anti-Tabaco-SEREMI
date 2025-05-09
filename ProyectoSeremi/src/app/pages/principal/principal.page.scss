@@ -4,13 +4,11 @@ ion-content.principal-content {
   top: 70px; 
 }
 
-/* Layout general: sidebar + área principal */
 .layout {
   display: flex;
   height: 100%;
 }
 
-/* Sidebar */
 .sidebar {
   flex: 0 0 20vw;
   background: rgba(97, 95, 95, 0.15);
@@ -30,27 +28,23 @@ ion-content.principal-content {
   }
 }
 
-/* Contenedor de botones: flex-wrap para hacer “dos arriba y uno abajo” */
 .grid-botones {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem; // MISMO GAP entre filas que entre columnas
-  padding: 4.1rem; //para centrar mejor.
+  gap: 2rem; 
+  padding: 4.1rem; 
 }
 
-/* Fila de botones superiores */
 .fila-superior {
   display: flex;
-  gap: 2rem; // MISMO GAP que .grid-botones -> igual distancia
+  gap: 2rem; 
 }
 
-/* Cada tarjeta (botón envuelto) */
 .tarjeta {
   width: 25vw;
 }
 
-/* Botones visuales */
 .tarjeta ion-button {
   width: 100%;
   height: 18vh;
@@ -63,9 +57,8 @@ ion-content.principal-content {
   --background-focused: #005a9c;
 }
 
-/* Centrado especial para el botón de charlas */
 .charlas {
-  margin-top: 2rem; // asegura misma distancia vertical (opcional si usas gap)
+  margin-top: 2rem; 
 }
 
 @media only screen and (max-width: 768px) {
@@ -98,39 +91,35 @@ ion-content.principal-content {
 }
 
 @media only screen and (max-width: 480px) {
-  /* El contenedor flex se asegura de centrar todo */
   .grid-botones {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* centra horizontalmente */
-    justify-content: center; /* centra verticalmente si fuera necesario */
+    align-items: center;    
+    justify-content: center;
     gap: 1rem;
     padding: 0.75rem;
   }
 
-  /* La fila superior también centra sus hijos */
   .fila-superior {
     display: flex;
-    flex-direction: column;  /* apilados verticalmente en móvil */
-    align-items: center;     /* centra cada tarjeta */
+    flex-direction: column;  
+    align-items: center;    
     gap: 1rem;
     width: 100%;
   }
 
-  /* Las tarjetas se limitan en ancho y se centran */
   .tarjeta {
     width: 90vw;
     max-width: 360px;
-    margin: 0 auto;          /* ¡asegura el centrado! */
+    margin: 0 auto;       
   }
 
-  /* Botones con buen tamaño y centrados */
   .tarjeta ion-button {
-    width: 100%;             /* ocupa todo el ancho de la tarjeta */
+    width: 100%;             
     height: 60px;
     font-size: 5vw;
     display: flex;
-    justify-content: center; /* icono + texto centrados */
+    justify-content: center; 
     align-items: center;
   }
 }

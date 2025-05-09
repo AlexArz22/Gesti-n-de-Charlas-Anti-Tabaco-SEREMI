@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Charla } from 'src/app/models/charla';
-import { CharlasService } from 'src/app/services/charlas.service';
 
 @Component({
   selector: 'app-charlas',
@@ -11,10 +10,9 @@ import { CharlasService } from 'src/app/services/charlas.service';
 })
 export class CharlasPage implements OnInit {
   charlas: Charla[] = [];
-  constructor(private charlasService:CharlasService , private router:Router) {}
+  constructor(private router:Router) {}
 
   ngOnInit() {
-    //this.charlas = this.charlasService.obtenerCharlas();
   }
 
   goToCharla() {
