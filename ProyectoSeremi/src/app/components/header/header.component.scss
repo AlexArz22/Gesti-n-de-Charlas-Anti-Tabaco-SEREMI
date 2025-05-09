@@ -3,6 +3,7 @@
   height: 56px;
 }
 
+
 .header-content {
   display: flex;
   align-items: center;
@@ -11,6 +12,7 @@
   position: relative;
   height: 56px;
   padding: 0 0rem;
+  overflow: hidden;
 }
 
 /* Logo a la izquierda */
@@ -42,10 +44,12 @@
   border-radius: 300px;
   font-size: 0.95rem;
   max-width: 30vw;
-  height: auto;
+  height: 100%;
   white-space: nowrap;
   overflow: hidden;
   margin-right: 0.50rem;
+  box-sizing: border-box;
+  
 }
 
 .user-button {
@@ -55,37 +59,45 @@
   border: none;
   //padding: 0;
   justify-content: flex-start;
-  width: 100%;
+  width: auto;
   border-radius: inherit;
   overflow: hidden;
 }
 
 .user-icon {
-  font-size: 45px;
+  font-size: 1.8rem;
   color: black;
   //margin-right: 1vw;
 }
 
 
 .user-name {
-  font-size: 1rem;
+  font-size: 0.9rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 @media (max-width: 600px) {
+  
+  ion-header,
+  ion-toolbar {
+    --padding-start: 0;
+    --padding-end: 0;
+    --padding-top: 0;
+    --padding-bottom: 0;
+  }
 
   .user-name {
     display: none;
   }
 
   .user-info {
-    padding: 0.5rem;
-    max-width: none;
+    background: transparent;
   }
 
   .user-icon {
-    font-size: 26px;
+    font-size: 36px;   
+    line-height: 1;
   }
 }

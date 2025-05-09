@@ -40,19 +40,39 @@
   color: #333;
 }
 
+/* Estilo común para ambos botones */
+.boton-volver,
 .boton-editar {
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 20px;
-}
-
-.boton-volver {
   position: fixed;
   bottom: 20px;
-  left: 20px;
-  z-index: 1000;
-  background-color: #1d1b3a;
-  color: white;
-  font-weight: bold;
-  border-radius: 10px;
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  max-width: 45%;
+  width: auto;
+  text-transform: none;
+}
+
+/* Estilo específico para el botón de volver */
+.boton-volver {
+  left: 10px;
+  --background: #2e2b3d;
+  --color: white;
+}
+
+/* En pantallas grandes (web) se posicionan normalmente */
+@media (min-width: 601px) {
+  .boton-volver,
+  .boton-editar {
+    position: static;
+    margin-top: 20px;
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+  }
+
+  .boton-editar {
+    align-self: center; /* Centra el botón de editar si estás usando flex */
+  }
 }
