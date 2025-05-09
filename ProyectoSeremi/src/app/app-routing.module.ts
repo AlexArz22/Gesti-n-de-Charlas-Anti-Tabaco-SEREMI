@@ -27,6 +27,14 @@ const routes: Routes = [
     ]
   },
   {
+    path: 'ver-perfil',
+    loadChildren: () => import('./pages/ver-perfil/ver-perfil.module').then( m => m.VerPerfilPageModule)
+  },
+  {
+    path: 'editar-perfil',
+    loadChildren: () => import('./pages/editar-perfil/editar-perfil.module').then( m => m.EditarPerfilPageModule)
+  },
+  {
     path: 'actividad-especifica',
     loadChildren: () => import('./pages/actividad-especifica/actividad-especifica.module').then( m => m.ActividadEspecificaPageModule)
   },
