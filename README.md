@@ -1,4 +1,4 @@
-# Gesti-n-de-Charlas-Anto-Tabaco-SEREMI
+# Gestión-de-Charlas-Anti-Tabaco-SEREMI
 # Presentado por:
 - Alex Aravena Pérez
 - Alvaro Catalán Villanueva
