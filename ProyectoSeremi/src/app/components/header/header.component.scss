@@ -15,13 +15,11 @@
   overflow: hidden;
 }
 
-/* Logo a la izquierda */
 .left-image {
   height: 56px;
   width: auto;
 }
 
-/* Casita al centro absoluto */
 .home-button {
   position: fixed;
   left: 50%;
@@ -35,7 +33,6 @@
   color: black;
 }
 
-/* Perfil a la derecha en recuadro */
 .user-info {
   display: flex;
   align-items: center;
@@ -57,7 +54,6 @@
   align-items: center;
   background: transparent;
   border: none;
-  //padding: 0;
   justify-content: flex-start;
   width: auto;
   border-radius: inherit;
@@ -67,7 +63,6 @@
 .user-icon {
   font-size: 1.8rem;
   color: black;
-  //margin-right: 1vw;
 }
 
 
