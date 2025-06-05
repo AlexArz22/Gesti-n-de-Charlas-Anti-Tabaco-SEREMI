@@ -7,41 +7,41 @@
     <div class="registro-formulario">
       <label class="registro-label">Correo Electrónico</label>
       <div class="campo">
-        <ion-input placeholder="*example@correo.com" type="email"></ion-input>
+        <ion-input [(ngModel)]="usuario.email" name="email" placeholder="*example@correo.com" type="email"></ion-input>
       </div>
 
       <label class="registro-label">Contraseña</label>
       <div class="campo">
-        <ion-input placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
+        <ion-input [(ngModel)]="usuario.password" name="password" placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
       </div>
 
       <label class="registro-label">Confirmar Contraseña</label>
       <div class="campo">
-        <ion-input placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
+        <ion-input [(ngModel)]="usuario.confirmPassword" name="confirmPassword" placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
       </div>
 
       <label class="registro-label">RUT</label>
       <div class="campo">
-        <ion-input placeholder="*Ingresar RUT*" type="text"></ion-input>
+        <ion-input [(ngModel)]="usuario.rut" name="rut" placeholder="*Ingresar RUT*" type="text"></ion-input>
       </div>
 
       <label class="registro-label">Región</label>
       <div class="campo">
-        <ion-input placeholder="*Ingresar Región*" type="text"></ion-input>
+        <ion-input [(ngModel)]="usuario.region" name="region" placeholder="*Ingresar Región*" type="text"></ion-input>
       </div>
 
       <label class="registro-label">Comuna</label>
       <div class="campo">
-        <ion-input placeholder="*Ingresar Comuna*" type="text"></ion-input>
+        <ion-input [(ngModel)]="usuario.comuna" name="comuna" placeholder="*Ingresar Comuna*" type="text"></ion-input>
       </div>
 
       <label class="registro-label">Dirección</label>
       <div class="campo">
-        <ion-input placeholder="*Ingresar Dirección*" type="text"></ion-input>
+        <ion-input [(ngModel)]="usuario.direccion" name="direccion" placeholder="*Ingresar Dirección*" type="text"></ion-input>
       </div>
 
       <div class="extras">
-        <ion-checkbox></ion-checkbox>
+        <ion-checkbox [(ngModel)]="usuario.terminos" name="terminos"></ion-checkbox>
         <span>Aceptar términos y condiciones</span>
 
         <div class="cuenta-existente">
