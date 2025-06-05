@@ -8,8 +8,33 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 
-import { MsalModule, MsalService, MsalGuard } from '@azure/msal-angular';
-import { PublicClientApplication } from '@azure/msal-browser';
+import { MsalModule, MsalService, MsalGuard, MsalGuardConfiguration, MsalInterceptorConfiguration } from '@azure/msal-angular';
+import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
+
+const msalInstance = new PublicClientApplication({
+  auth: {
+    clientId: 'f3d210fb-32ef-4500-b679-62da83d37a7e',
+    authority: 'https://login.microsoftonline.com/5670779e-1677-4846-88b2-600761c13f2f',
+    redirectUri: 'http://localhost:8100/'
+  }
+});
+
+const guardConfig: MsalGuardConfiguration = {
+  interactionType: InteractionType.Redirect,
+  authRequest: {
+    scopes: ['user.read']  // Ajusta los scopes según tu necesidad
+  }
+};
+
+const interceptorConfig: MsalInterceptorConfiguration = {
+  interactionType: InteractionType.Redirect,
+  protectedResourceMap: new Map<string, Array<string>>([
+    ['https://graph.microsoft.com/v1.0/me/messages', ['Mail.Read']] // Asegúrate de usar el scope adecuado para tu API
+  ])
+};
+
+
+
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -17,13 +42,7 @@ import { PublicClientApplication } from '@azure/msal-browser';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    MsalModule.forRoot(new PublicClientApplication({
-      auth: {
-        clientId: 'f3d210fb-32ef-4500-b679-62da83d37a7e',
-        authority: 'https://login.microsoftonline.com/5670779e-1677-4846-88b2-600761c13f2f',
-        redirectUri: 'http://localhost:8100/'
-      }
-    }))
+    MsalModule.forRoot(msalInstance, guardConfig, interceptorConfig)
   ],
 
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
