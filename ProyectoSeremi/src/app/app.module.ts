@@ -36,20 +36,9 @@ const interceptorConfig: MsalInterceptorConfiguration = {
 };
 
 
-
-
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
-  imports: [
-    BrowserModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
-    MsalModule.forRoot(msalInstance, guardConfig, interceptorConfig)
-  ],
-
-@NgModule({
-  declarations: [AppComponent, HeaderComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, MsalModule.forRoot(msalInstance, guardConfig, interceptorConfig) ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   exports: [HeaderComponent]
