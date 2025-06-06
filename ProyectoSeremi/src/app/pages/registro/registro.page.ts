@@ -1,39 +1,18 @@
-// import { Component, OnInit } from '@angular/core';
-// import { Router } from '@angular/router';
-
-// @Component({
-//   selector: 'app-registro',
-//   templateUrl: './registro.page.html',
-//   styleUrls: ['./registro.page.scss'],
-//   standalone: false
-// })
-// export class RegistroPage implements OnInit {
-  
-//   constructor(private router: Router){} //Para gestionar navegación entre páginas.) {} //Para mostrar notificaciones por pantalla.
-
-//   ngOnInit() {
-//   }
-
-//   irAInicioSesion() {
-//     this.router.navigate(['/inicio-sesion']);
-//   }
-
-
-// }
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ApiRestFullService } from '..service/api-rest-full.service';
+import { ApiRestFullService } from '../../services/api-rest-full.service';
 
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
+  standalone: false
 })
 export class RegistroPage implements OnInit {
   usuario = {
     email: '',
-    password: '',
-    confirmPassword: '',
+    contrasenia: '',
+    confirmContrasenia: '',
     rut: '',
     nombre: '',
     apellido: '',
@@ -43,12 +22,12 @@ export class RegistroPage implements OnInit {
     terminos: false
   };
 
-  constructor(private router: Router, private userService: UserService) {}
+  constructor(private router: Router, private userService: ApiRestFullService) {}
 
   ngOnInit() {}
 
   registrar() {
-    if (this.usuario.password !== this.usuario.confirmPassword) {
+    if (this.usuario.contrasenia !== this.usuario.confirmContrasenia) {
       alert('Las contraseñas no coinciden');
       return;
     }
@@ -62,7 +41,7 @@ export class RegistroPage implements OnInit {
       rut: this.usuario.rut,
       nombre: this.usuario.nombre,
       apellido: this.usuario.apellido,
-      password: this.usuario.password,
+      contrasenia: this.usuario.contrasenia,
       email: this.usuario.email,
       region: this.usuario.region,
       comuna: this.usuario.comuna,

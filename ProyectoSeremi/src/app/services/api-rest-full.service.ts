@@ -4,9 +4,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ApiRestFullService {
 
-  private apiUrl = 'http://localhost:3000/api'; // cambia a tu IP en pruebas reales
+  private apiUrl = 'http://localhost:3000/usuarios'; // cambia a tu IP en pruebas reales
 
   constructor(private http: HttpClient) {}
 
@@ -15,7 +15,7 @@ export class ApiService {
   }
   
   registrarUsuario(datos: any) {
-    return this.http.post(`${this.apiUrl}/`, datos);
+    return this.http.post(`${this.apiUrl}`, datos);
   }
 
 }

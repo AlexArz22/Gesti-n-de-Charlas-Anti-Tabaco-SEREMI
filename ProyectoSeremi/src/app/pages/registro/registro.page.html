@@ -12,12 +12,12 @@
 
       <label class="registro-label">Contraseña</label>
       <div class="campo">
-        <ion-input [(ngModel)]="usuario.password" name="password" placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
+        <ion-input [(ngModel)]="usuario.contrasenia" name="contrasenia" placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
       </div>
 
       <label class="registro-label">Confirmar Contraseña</label>
       <div class="campo">
-        <ion-input [(ngModel)]="usuario.confirmPassword" name="confirmPassword" placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
+        <ion-input [(ngModel)]="usuario.confirmContrasenia" name="confirmContrasenia" placeholder="*Mínimo 8 caracteres, 2 números." type="password"></ion-input>
       </div>
 
       <label class="registro-label">RUT</label>
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <ion-button class="btn-registrarse" expand="block" (click)="irAInicioSesion()">Registrarse</ion-button>
+      <ion-button class="btn-registrarse" expand="block" (click)="registrar()">Registrarse</ion-button>
     </div>
   </div>
 </ion-content>
