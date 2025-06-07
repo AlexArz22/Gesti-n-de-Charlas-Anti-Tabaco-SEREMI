@@ -1,9 +1,12 @@
 export interface Usuario {
+    email: string,
+    contrasenia: string,
+    confirmContrasenia: string,
     rut: string,
-    correo: string,
-    contraseña: string, 
-    rol: string,
+    nombre: string,
+    apellido: string,
     region: string,
     comuna: string,
-    direccion: string
+    direccion: string,
+    terminos: boolean
 }

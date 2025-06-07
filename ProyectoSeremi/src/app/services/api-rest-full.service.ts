@@ -9,13 +9,13 @@ export class ApiRestFullService {
   private apiUrl = 'http://localhost:3000/usuarios'; // cambia a tu IP en pruebas reales
 
   constructor(private http: HttpClient) {}
-
-  getSaludo() {
-    return this.http.get(`${this.apiUrl}/saludo`);
-  }
   
   registrarUsuario(datos: any) {
     return this.http.post(`${this.apiUrl}`, datos);
+  }
+
+  loginUsuario(datos: any) {
+    return this.http.post(`${this.apiUrl}/login`, datos);
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiRestFullService } from '../../services/api-rest-full.service';
+import { Usuario } from '../../models/Usuario';
 
 @Component({
   selector: 'app-registro',
@@ -9,7 +10,7 @@ import { ApiRestFullService } from '../../services/api-rest-full.service';
   standalone: false
 })
 export class RegistroPage implements OnInit {
-  usuario = {
+  usuario: Usuario= {
     email: '',
     contrasenia: '',
     confirmContrasenia: '',

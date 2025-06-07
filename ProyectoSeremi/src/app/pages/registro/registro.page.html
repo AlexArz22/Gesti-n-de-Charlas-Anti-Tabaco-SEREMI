@@ -5,6 +5,19 @@
     </div>
 
     <div class="registro-formulario">
+
+      <div class="nombre-apellido">
+        <div class="campo-nombre">
+          <label class="registro-label">Nombre</label>
+          <ion-input [(ngModel)]="usuario.nombre" name="nombre" placeholder="*Nombre*" type="text"></ion-input>
+        </div>
+
+        <div class="campo-apellido">
+          <label class="registro-label">Apellido</label>
+          <ion-input [(ngModel)]="usuario.apellido" name="apellido" placeholder="*Apellido*" type="text"></ion-input>
+        </div>
+      </div>
+
       <label class="registro-label">Correo Electrónico</label>
       <div class="campo">
         <ion-input [(ngModel)]="usuario.email" name="email" placeholder="*example@correo.com" type="email"></ion-input>
