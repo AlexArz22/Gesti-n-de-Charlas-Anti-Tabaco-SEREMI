@@ -13,6 +13,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { MsalModule, MsalService, MsalGuard, MsalGuardConfiguration, MsalInterceptorConfiguration } from '@azure/msal-angular';
 import { InteractionType, PublicClientApplication } from '@azure/msal-browser';
 
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+
 const msalInstance = new PublicClientApplication({
   auth: {
     clientId: 'f3d210fb-32ef-4500-b679-62da83d37a7e',
@@ -38,7 +41,10 @@ const interceptorConfig: MsalInterceptorConfiguration = {
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, MsalModule.forRoot(msalInstance, guardConfig, interceptorConfig) ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, MsalModule.forRoot(msalInstance, guardConfig, interceptorConfig), CalendarModule.forRoot({
+        provide: DateAdapter,
+        useFactory: adapterFactory,
+      }), ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   exports: [HeaderComponent]
