@@ -1,49 +1,110 @@
+/* General */
 .contenido-calendario {
-  margin-left: 11vw;   
-  margin-right: 11vw;  
-  padding: 20px;
-  text-align: left;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //justify-content: flex-start;
+  //padding: 16px;
+  //height: 100%;
+  //background: #f4f5f8;
+  //top: 65px;
+}
 
-  .titulo-calendario{
-    margin-left: 5vw; 
-    font-size: 40px;
-    font-weight: bold;
-    text-align: left;
-    margin-top: 50px;
-    color: #000;
-  }
-  
-  .volver-btn {
-    margin: 20px 0 20px auto;
-    width: 200px;
-    display: block;
-  }
-  
-  .calendario-central {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
+/* Título del calendario */
+.titulo-calendario {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 70px;
+  color: #0b0b0b;
+  text-align: center;
+}
 
-  .dias-semana{
-    display: flex;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-  }
-  
-  ion-row {
-    text-align: center;
-  }
-  
-  ion-col {
-    border: 1px solid #000000;
-    padding: 10px 0;
-  }
-  
-  .evento {
-    background-color: #f88;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-  }
-  
+/* Contenedor central del calendario */
+.calendario-central {
+  width: 100%;
+  max-width: 900px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón de volver */
+.volver-btn {
+  position: fixed;
+  bottom: 20px;
+  z-index: 10;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  max-width: 45%;
+  width: auto;
+  text-transform: none;
+  left: 10px;
+  --background: #2e2b3d;
+  --color: white;
+}
+
+/* Ajustar el FullCalendar */
+::ng-deep .fc {
+  border-radius: 8px;
+}
+
+::ng-deep .fc-toolbar-title {
+  font-size: 24px;
+  color: #4f6fd0;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+.fc-daygrid-day {
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambiar color de días seleccionados o hover */
+.fc-daygrid-day:hover {
+  background-color: #f1f1f1;
+}
+
+.fc-daygrid-day-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3a3a3a;
+}
+
+.fc-button-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.fc-button-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Estilo para los eventos del calendario */
+.fc-daygrid-event {
+  background-color: #28a745;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+/* Botones de navegación */
+.fc-prev-button, .fc-next-button {
+  background-color: #007bff;
+  border-radius: 50%;
+  color: white;
+  border: none;
+}
+
+.fc-prev-button:hover, .fc-next-button:hover {
+  background-color: #0056b3;
+}
