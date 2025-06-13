@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AutenticacionService } from '../../services/autenticacion.service';
+
 @Component({
   selector: 'app-charla-especifica',
   templateUrl: './charla-especifica.page.html',
@@ -7,6 +9,7 @@ import { Router } from '@angular/router';
   standalone: false
 })
 export class CharlaEspecificaPage implements OnInit {
+  esAdmin: boolean=false;
 
   tiempoTranscurrido: string = '00:00:00';
   botonIniciado: boolean = false;
@@ -16,9 +19,12 @@ export class CharlaEspecificaPage implements OnInit {
   private segundos: number = 0;
 
   @Input() title:string=""
-  constructor(private router: Router) {}
+  constructor(private router: Router, private autenticacionService: AutenticacionService) {}
 
-  ngOnInit() { }
+  ngOnInit() {
+    const usuario = this.autenticacionService.getUsuarioActual();
+    this.esAdmin = usuario?.rol === 'admin';
+  }
 
   goToCharlas(){
     this.router.navigate(['/charlas']);

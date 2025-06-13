@@ -45,7 +45,7 @@
       <ion-button class="btn" color="#7b7de0"  expand="block" (click)="goToSeleccionarActividad()">Actividades</ion-button>
       <ion-button class="btn" color="#7b7de0" expand="block" (click)="goToSeleccionarArchivo()">Presentaciones</ion-button>
       <ion-button class="btn" color="#7b7de0" expand="block" (click)="goToRegistrarAsistentes()">Registrar Asistencia</ion-button>
-      <ion-button class="btn" color="#7b7de0" expand="block" (click)="goToEditarCharla()">Editar Charla</ion-button>
+      <ion-button *ngIf="esAdmin" class="btn" color="#7b7de0" expand="block" (click)="goToEditarCharla()">Editar Charla</ion-button>
     </aside>
 
   </div>
