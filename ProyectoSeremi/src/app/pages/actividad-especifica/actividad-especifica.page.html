@@ -9,7 +9,7 @@
 
       <div class="botones-superiores">
         <button class="boton-accion" (click)="irAActividadIniciada()">Iniciar Actividad</button>
-        <button *ngIf="esAdmin" class="boton-accion" (click)="irAeditandoActividad()">Editar Actividad</button>
+        <button class="boton-accion" (click)="irAeditandoActividad()">Editar Actividad</button>
       </div>
 
       <ion-button *ngIf="esAdmin" class="eliminar-btn" (click)="apretarEliminar()">Eliminar Actividad</ion-button>
