@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AutenticacionService } from '../../services/autenticacion.service';
 
 @Component({
   selector: 'app-editar-charla-especifica',
@@ -14,9 +15,15 @@ export class EditarCharlaEspecificaPage implements OnInit {
   region: string = '';
   comuna: string = '';
   curso: string = '';
-  temario: string = '';// todo esto aun estara por verse para la entrega 2
+  temario: string = '';
+  esAdmin: boolean =false;
 
-  constructor(private router: Router, private location: Location) { }
+  constructor(private router: Router, private location: Location, private autenticacionService: AutenticacionService) { }
+
+  ngOnInit() {
+    const usuario = this.autenticacionService.getUsuarioActual();
+    this.esAdmin = usuario?.rol === 'admin';
+  }
 
   guardarCambios() {
     this.router.navigate(['/charla-especifica']);
@@ -36,9 +43,6 @@ export class EditarCharlaEspecificaPage implements OnInit {
 
   volver() {
     this.location.back();
-  }
-
-  ngOnInit() {
   }
 
 }

@@ -20,9 +20,8 @@
         Volver al menú
       </ion-button>
 
-      <ion-button class="crear-charla-btn" (click)="goToCrearCharla()">
+      <ion-button *ngIf="esAdmin" class="crear-charla-btn" (click)="goToCrearCharla()">
         Crear Charla Nueva
       </ion-button>
-
     </div>
   </ion-content>

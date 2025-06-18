@@ -12,7 +12,7 @@
         <button class="boton-accion" (click)="irAeditandoActividad()">Editar Actividad</button>
       </div>
 
-      <ion-button class="eliminar-btn" (click)="apretarEliminar()">Eliminar Actividad</ion-button>
+      <ion-button *ngIf="esAdmin" class="eliminar-btn" (click)="apretarEliminar()">Eliminar Actividad</ion-button>
       
     </div>
   </div>
